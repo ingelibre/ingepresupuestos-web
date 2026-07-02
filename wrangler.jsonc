@@ -1,11 +1,14 @@
 {
-  // Configuración de despliegue para Cloudflare Workers (sitio estático).
-  // El build de Git ejecuta `npx wrangler deploy`, que necesita este archivo
-  // para saber que debe publicar los assets de la raíz del repo.
+  "$schema": "node_modules/wrangler/config-schema.json",
   "name": "ingepresupuestos-web",
-  "compatibility_date": "2026-06-18",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_date": "2026-07-02",
+  "observability": {
+    "enabled": true
+  },
   "assets": {
-    "directory": "./"
-  }
+    "directory": "."
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
 }
