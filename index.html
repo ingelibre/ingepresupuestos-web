@@ -46,7 +46,7 @@
     "name": "IngePresupuestos",
     "operatingSystem": "Windows, Linux",
     "applicationCategory": "BusinessApplication",
-    "description": "Software de presupuestos de obra con Inteligencia Artificial: genera especificaciones técnicas, ACU, metrados, cronograma Gantt y 13 reportes. Compatible con S10, Delphin y PowerCost. Multiplataforma, offline, formato abierto SQLite. Reportes PDF gratis.",
+    "description": "Software LIBRE de presupuestos de obra con IA: genera especificaciones técnicas, ACU, metrados, cronograma Gantt y 13 reportes. Compatible con S10, Delphin y PowerCost. Multiplataforma, offline, código abierto (GPL-3.0). Gratis, con todas las funciones incluidas.",
     "url": "https://ingepresupuestos.com/",
     "image": "https://ingepresupuestos.com/images/logo.png",
     "author": {
@@ -55,29 +55,13 @@
       "email": "ing.sumari@gmail.com"
     },
     "inLanguage": "es",
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Gratis",
-        "price": "0",
-        "priceCurrency": "USD",
-        "description": "App completa sin límite de proyectos, todos los reportes en PDF, importadores nativos. Sin tarjeta, sin registro."
-      },
-      {
-        "@type": "Offer",
-        "name": "Licencia Perpetua",
-        "price": "100",
-        "priceCurrency": "USD",
-        "description": "Pago único (S/ 300 en Perú). Exportación a Excel, Word, ODS, ODT y MS Project. Updates gratis por 2 años."
-      },
-      {
-        "@type": "Offer",
-        "name": "Licencia Anual",
-        "price": "20",
-        "priceCurrency": "USD",
-        "description": "Vigencia 12 meses (S/ 80 en Perú). Exportación a Excel, Word, ODS, ODT y MS Project. Todas las actualizaciones."
-      }
-    ]
+    "license": "https://www.gnu.org/licenses/gpl-3.0.html",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Software libre y gratuito bajo licencia GPL-3.0. App completa sin límites: todos los reportes (PDF, Excel, Word, ODS, ODT, MS Project), importadores nativos, cronogramas y control de obra. Sin tarjeta, sin registro."
+    }
   }
   </script>
 
@@ -165,7 +149,7 @@
       </a>
       <nav class="nav-links">
         <a href="#features">Características</a>
-        <a href="#precios">Precios</a>
+        <a href="#descargar">Descargar</a>
         <a href="https://docs.ingepresupuestos.com">Manual</a>
         <a href="/blog/">Blog</a>
         <a href="#faq">FAQ</a>
@@ -179,7 +163,7 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="container hero-center">
-      <h1>El software de presupuestos<br>de obra para llevarlo a todos lados</h1>
+      <h1>Software libre de presupuestos<br>de obra</h1>
       <p class="hero-sub">Multiplataforma. Offline. Formato abierto.<br>Compatible con S10, Delphin y PowerCost.</p>
       <div class="hero-ctas">
         <a href="#descargar" class="btn btn-primary btn-lg">Descargar IngePresupuestos</a>
@@ -307,7 +291,7 @@
         <div class="feat-text">
           <h2>Multiplataforma.<br>Windows y Linux.</h2>
           <p>Una sola aplicación, idéntica en ambos sistemas. Los mismos proyectos, las mismas funciones, sin emuladores ni máquinas virtuales.</p>
-          <p>Instalador .exe para Windows, AppImage para Linux. Otras plataformas próximamente.</p>
+          <p>Instalador .exe o Microsoft Store para Windows; AppImage o Flatpak para Linux.</p>
         </div>
         <div class="mini-carousel">
           <div class="mini-track">
@@ -464,7 +448,7 @@
   <section id="descargar" class="download-section">
     <div class="container">
       <h2>Descargar</h2>
-      <p class="download-sub">Prueba completa por 30 dias. Sin tarjeta, sin registro.</p>
+      <p class="download-sub">Software libre y de código abierto (GPL-3.0).</p>
       <div class="dl-row">
         <div class="dl-group">
           <span class="dl-group-label">IngePresupuestos</span>
@@ -477,6 +461,13 @@
               </a>
               <a class="dl-portable" href="#" id="dl-win-zip">Portable .zip</a>
             </div>
+            <a href="https://apps.microsoft.com/detail/9PN8FKLP4RH5"
+               target="_blank" rel="noopener"
+               class="dl-card dl-card-compact" id="dl-msstore">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 12V6.5l8-1.1V12H3zm0 .5V18l8 1.1v-6.6H3zm9-7.7V12h9V4l-9 .8zm0 7.7v6.5l9 .8V12.5h-9z"/></svg>
+              <strong>Microsoft Store</strong>
+              <span>Windows 10/11</span>
+            </a>
             <div class="dl-item">
             <a href="#" class="dl-card dl-card-compact" id="dl-linux">
               <svg width="24" height="24" viewBox="0 0 448 512" fill="currentColor"><path d="M220.8 123.3c1 .5 1.8 1.7 3 1.7c1.1 0 2.8-.4 2.9-1.5c.2-1.4-1.9-2.3-3.2-2.9c-1.7-.7-3.9-1-5.5-.1c-.4.2-.8.7-.6 1.1c.3 1.3 2.3 1.1 3.4 1.7zm-21.9 1.7c1.2 0 2-1.2 3-1.7c1.1-.6 3.1-.4 3.5-1.6c.2-.4-.2-.9-.6-1.1c-1.6-.9-3.8-.6-5.5.1c-1.3.6-3.4 1.5-3.2 2.9c.1 1 1.8 1.5 2.8 1.4zM420 403.8c-3.6-4-5.3-11.6-7.2-19.7c-1.8-8.1-3.9-16.8-10.5-22.4c-1.3-1.1-2.6-2.1-4-2.9c-1.3-.8-2.7-1.5-4.1-2c9.2-27.3 5.6-54.5-3.7-79.1c-11.4-30.1-31.3-56.4-46.5-74.4c-17.1-21.5-33.7-41.9-33.4-72C311.1 85.4 315.7.1 234.8 0C132.4-.2 158 103.4 156.9 135.2c-1.7 23.4-6.4 41.8-22.5 64.7c-18.9 22.5-45.5 58.8-58.1 96.7c-6 17.9-8.8 36.1-6.2 53.3c-6.5 5.8-11.4 14.7-16.6 20.2c-4.2 4.3-10.3 5.9-17 8.3s-14 6-18.5 14.5c-2.1 3.9-2.8 8.1-2.8 12.4c0 3.9.6 7.9 1.2 11.8c1.2 8.1 2.5 15.7.8 20.8c-5.2 14.4-5.9 24.4-2.2 31.7c3.8 7.3 11.4 10.5 20.1 12.3c17.3 3.6 40.8 2.7 59.3 12.5c19.8 10.4 39.9 14.1 55.9 10.4c11.6-2.6 21.1-9.6 25.9-20.2c12.5-.1 26.3-5.4 48.3-6.6c14.9-1.2 33.6 5.3 55.1 4.1c.6 2.3 1.4 4.6 2.5 6.7v.1c8.3 16.7 23.8 24.3 40.3 23c16.6-1.3 34.1-11 48.3-27.9c13.6-16.4 36-23.2 50.9-32.2c7.4-4.5 13.4-10.1 13.9-18.3c.4-8.2-4.4-17.3-15.5-29.7zM223.7 87.3c9.8-22.2 34.2-21.8 44-.4c6.5 14.2 3.6 30.9-4.3 40.4c-1.6-.8-5.9-2.6-12.6-4.9c1.1-1.2 3.1-2.7 3.9-4.6c4.8-11.8-.2-27-9.1-27.3c-7.3-.5-13.9 10.8-11.8 23c-4.1-2-9.4-3.5-13-4.4c-1-6.9-.3-14.6 2.9-21.8zM183 75.8c10.1 0 20.8 14.2 19.1 33.5c-3.5 1-7.1 2.5-10.2 4.6c1.2-8.9-3.3-20.1-9.6-19.6c-8.4.7-9.8 21.2-1.8 28.1c1 .8 1.9-.2-5.9 5.5c-15.6-14.6-10.5-52.1 8.4-52.1zm-13.6 60.7c6.2-4.6 13.6-10 14.1-10.5c4.7-4.4 13.5-14.2 27.9-14.2c7.1 0 15.6 2.3 25.9 8.9c6.3 4.1 11.3 4.4 22.6 9.3c8.4 3.5 13.7 9.7 10.5 18.2c-2.6 7.1-11 14.4-22.7 18.1c-11.1 3.6-19.8 16-38.2 14.9c-3.9-.2-7-1-9.6-2.1c-8-3.5-12.2-10.4-20-15c-8.6-4.8-13.2-10.4-14.7-15.3c-1.4-4.9 0-9 4.2-12.3zm3.3 334c-2.7 35.1-43.9 34.4-75.3 18c-29.9-15.8-68.6-6.5-76.5-21.9c-2.4-4.7-2.4-12.7 2.6-26.4v-.2c2.4-7.6.6-16-.6-23.9c-1.2-7.8-1.8-15 .9-20c3.5-6.7 8.5-9.1 14.8-11.3c10.3-3.7 11.8-3.4 19.6-9.9c5.5-5.7 9.5-12.9 14.3-18c5.1-5.5 10-8.1 17.7-6.9c8.1 1.2 15.1 6.8 21.9 16l19.6 35.6c9.5 19.9 43.1 48.4 41 68.9zm-1.4-25.9c-4.1-6.6-9.6-13.6-14.4-19.6c7.1 0 14.2-2.2 16.7-8.9c2.3-6.2 0-14.9-7.4-24.9c-13.5-18.2-38.3-32.5-38.3-32.5c-13.5-8.4-21.1-18.7-24.6-29.9s-3-23.3-.3-35.2c5.2-22.9 18.6-45.2 27.2-59.2c2.3-1.7.8 3.2-8.7 20.8c-8.5 16.1-24.4 53.3-2.6 82.4c.6-20.7 5.5-41.8 13.8-61.5c12-27.4 37.3-74.9 39.3-112.7c1.1.8 4.6 3.2 6.2 4.1c4.6 2.7 8.1 6.7 12.6 10.3c12.4 10 28.5 9.2 42.4 1.2c6.2-3.5 11.2-7.5 15.9-9c9.9-3.1 17.8-8.6 22.3-15c7.7 30.4 25.7 74.3 37.2 95.7c6.1 11.4 18.3 35.5 23.6 64.6c3.3-.1 7 .4 10.9 1.4c13.8-35.7-11.7-74.2-23.3-84.9c-4.7-4.6-4.9-6.6-2.6-6.5c12.6 11.2 29.2 33.7 35.2 59c2.8 11.6 3.3 23.7.4 35.7c16.4 6.8 35.9 17.9 30.7 34.8c-2.2-.1-3.2 0-4.2 0c3.2-10.1-3.9-17.6-22.8-26.1c-19.6-8.6-36-8.6-38.3 12.5c-12.1 4.2-18.3 14.7-21.4 27.3c-2.8 11.2-3.6 24.7-4.4 39.9c-.5 7.7-3.6 18-6.8 29c-32.1 22.9-76.7 32.9-114.3 7.2zm257.4-11.5c-.9 16.8-41.2 19.9-63.2 46.5c-13.2 15.7-29.4 24.4-43.6 25.5s-26.5-4.8-33.7-19.3c-4.7-11.1-2.4-23.1 1.1-36.3c3.7-14.2 9.2-28.8 9.9-40.6c.8-15.2 1.7-28.5 4.2-38.7c2.6-10.3 6.6-17.2 13.7-21.1c.3-.2.7-.3 1-.5c.8 13.2 7.3 26.6 18.8 29.5c12.6 3.3 30.7-7.5 38.4-16.3c9-.3 15.7-.9 22.6 5.1c9.9 8.5 7.1 30.3 17.1 41.6c10.6 11.6 14 19.5 13.7 24.6zM173.3 148.7c2 1.9 4.7 4.5 8 7.1c6.6 5.2 15.8 10.6 27.3 10.6c11.6 0 22.5-5.9 31.8-10.8c4.9-2.6 10.9-7 14.8-10.4s5.9-6.3 3.1-6.6s-2.6 2.6-6 5.1c-4.4 3.2-9.7 7.4-13.9 9.8c-7.4 4.2-19.5 10.2-29.9 10.2s-18.7-4.8-24.9-9.7c-3.1-2.5-5.7-5-7.7-6.9c-1.5-1.4-1.9-4.6-4.3-4.9c-1.4-.1-1.8 3.7 1.7 6.5z"/></svg>
@@ -485,18 +476,16 @@
             </a>
               <a class="dl-portable" href="#" id="dl-linux-tar">Portable .tar.gz</a>
             </div>
-            <a href="https://apps.microsoft.com/detail/9PN8FKLP4RH5"
-               target="_blank" rel="noopener"
-               class="dl-card dl-card-compact" id="dl-msstore">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3 12V6.5l8-1.1V12H3zm0 .5V18l8 1.1v-6.6H3zm9-7.7V12h9V4l-9 .8zm0 7.7v6.5l9 .8V12.5h-9z"/></svg>
-              <strong>Microsoft Store</strong>
-              <span>Windows 10/11</span>
-            </a>
           </div>
           <div class="dl-winget">
             <code>winget install ingepresupuestos</code>
             <button type="button" class="dl-winget-copy" data-copy="winget install ingepresupuestos" aria-label="Copiar comando winget">Copiar</button>
           </div>
+          <div class="dl-winget dl-flatpak">
+            <code>flatpak install --from https://downloads.ingepresupuestos.com/flatpak/ingepresupuestos.flatpakref</code>
+            <button type="button" class="dl-winget-copy" data-copy="flatpak install --from https://downloads.ingepresupuestos.com/flatpak/ingepresupuestos.flatpakref" aria-label="Copiar comando Flatpak">Copiar</button>
+          </div>
+          <p class="dl-flatpak-note">Flatpak para cualquier Linux (edición completa, con reportes ODT/ODS). También <a href="https://downloads.ingepresupuestos.com/flatpak/ingepresupuestos.flatpakref">instalar con un clic</a>.</p>
         </div>
         <div class="dl-divider"></div>
         <div class="dl-group">
@@ -525,8 +514,8 @@
   <section id="comparativa" class="section">
     <div class="container">
       <div class="section-head">
-        <h2>Compara y decide</h2>
-        <p>IngePresupuestos frente a S10, Delphin Express y PowerCost.</p>
+        <h2>Una alternativa libre</h2>
+        <p>Todo lo que necesitas para tus presupuestos de obra — más Linux, IA, Control de Obra y código abierto.</p>
       </div>
       <div class="compare-wrap">
         <table class="compare-table">
@@ -534,9 +523,7 @@
             <tr>
               <th scope="col">Característica</th>
               <th scope="col" class="compare-hero">IngePresupuestos</th>
-              <th scope="col">S10</th>
-              <th scope="col">Delphin</th>
-              <th scope="col">PowerCost</th>
+              <th scope="col">Software propietario<br><span style="font-weight:400;font-size:.8em;color:#8a97a3;">S10 · Delphin · PowerCost</span></th>
             </tr>
           </thead>
           <tbody>
@@ -544,50 +531,36 @@
               <th scope="row">Windows</th>
               <td class="compare-hero"><span class="ck">✓</span></td>
               <td><span class="ck">✓</span></td>
-              <td><span class="ck">✓</span></td>
-              <td><span class="ck">✓</span></td>
             </tr>
             <tr>
               <th scope="row">Linux</th>
               <td class="compare-hero"><span class="ck">✓</span></td>
-              <td><span class="no">—</span></td>
-              <td><span class="no">—</span></td>
               <td><span class="no">—</span></td>
             </tr>
             <tr>
               <th scope="row">Formato abierto (SQLite)</th>
               <td class="compare-hero"><span class="ck">✓</span></td>
               <td><span class="no">—</span></td>
-              <td><span class="no">—</span></td>
-              <td><span class="no">—</span></td>
             </tr>
             <tr>
               <th scope="row">Asistente IA integrado</th>
               <td class="compare-hero"><span class="ck">✓</span></td>
               <td><span class="no">—</span></td>
-              <td><span class="no">—</span></td>
-              <td><span class="no">—</span></td>
+            </tr>
+            <tr>
+              <th scope="row">Control de Obra</th>
+              <td class="compare-hero"><span class="ck">✓</span> Valorizaciones · almacén · curva S real</td>
+              <td>Parcial</td>
             </tr>
             <tr>
               <th scope="row">Importa proyectos de los demás</th>
               <td class="compare-hero"><span class="ck">✓</span> S10 · Delphin · PowerCost</td>
               <td><span class="no">—</span></td>
-              <td><span class="no">—</span></td>
-              <td><span class="no">—</span></td>
             </tr>
             <tr>
-              <th scope="row">Versión gratuita con reportes PDF</th>
-              <td class="compare-hero"><span class="ck">✓</span> Sin límite de proyectos</td>
+              <th scope="row">Código abierto (GPL-3.0)</th>
+              <td class="compare-hero"><span class="ck">✓</span></td>
               <td><span class="no">—</span></td>
-              <td><span class="no">—</span></td>
-              <td><span class="no">—</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Licencia completa</th>
-              <td class="compare-hero"><span data-pen="S/ 300" data-usd="$ 100">S/ 300</span> único pago</td>
-              <td>De pago</td>
-              <td>De pago</td>
-              <td>De pago</td>
             </tr>
           </tbody>
         </table>
@@ -596,53 +569,29 @@
     </div>
   </section>
 
-  <!-- ============ PRECIOS ============ -->
+  <!-- ============ SOFTWARE LIBRE ============ -->
   <section id="precios" class="section bg-light">
     <div class="container">
       <div class="section-head">
-        <h2>Licenciamiento como debería ser</h2>
-        <p>Elección sin compromiso. Pagas solo si quieres reportes editables.</p>
+        <h2>Libre para siempre</h2>
+        <p>IngePresupuestos es <strong>software libre</strong> (licencia GPL-3.0): puedes usarlo, estudiarlo y compartirlo. Con todas las funciones y reportes incluidos, <strong>tu imaginación es el límite</strong>.</p>
       </div>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <h3>Gratis</h3>
-          <div class="price"><span class="price-big" data-pen="S/ 0" data-usd="$ 0">S/ 0</span><span class="price-sub">para siempre</span></div>
+      <div class="pricing-grid" style="justify-content:center;">
+        <div class="pricing-card pricing-pop">
+          <span class="pricing-badge">Software libre</span>
+          <h3>Software libre y de código abierto</h3>
+          <p style="color:#667885;margin:2px 0 16px;font-size:.98rem;">Licencia GPL-3.0 · úsalo, estúdialo y compártelo.</p>
           <ul>
             <li>✓ App completa, sin límite de proyectos</li>
-            <li>✓ Todos los reportes en PDF</li>
-            <li>✓ Gantt + Curva S + Valorizado</li>
-            <li>✓ Importadores nativos</li>
-            <li>✓ Tuxia IA con tu API key</li>
-            <li>✓ Sin tarjeta, sin registro</li>
+            <li>✓ Todos los reportes: PDF · Excel · Word · ODS · ODT · MS Project</li>
+            <li>✓ Gantt · Curva S · Valorizado · Control de Obra</li>
+            <li>✓ Importadores nativos (S10, Delphin, PowerCost)</li>
+            <li>✓ Tuxia IA con tu propia API key</li>
+            <li>✓ Sin candados: todas las funciones abiertas</li>
           </ul>
-          <a href="#descargar" class="btn btn-ghost">Descargar</a>
-        </div>
-        <div class="pricing-card pricing-pop">
-          <span class="pricing-badge">Recomendado</span>
-          <h3>Perpetua</h3>
-          <div class="price"><span class="price-big" data-pen="S/ 300" data-usd="$ 100">S/ 300</span><span class="price-sub">único pago</span></div>
-          <ul>
-            <li>✓ Licencia para siempre</li>
-            <li>✓ Excel · Word · ODS · ODT · MS Project</li>
-            <li>✓ 1 PC (dualboot incluido)</li>
-            <li>✓ Updates gratis 2 años</li>
-            <li>✓ Soporte directo del autor</li>
-          </ul>
-          <a href="https://wa.me/51998839090?text=Hola%2C%20quiero%20la%20licencia%20Perpetua%20de%20IngePresupuestos" target="_blank" rel="noopener" class="btn btn-primary">Comprar</a>
-        </div>
-        <div class="pricing-card">
-          <h3>Anual</h3>
-          <div class="price"><span class="price-big" data-pen="S/ 80" data-usd="$ 20">S/ 80</span><span class="price-sub">por año</span></div>
-          <ul>
-            <li>✓ Vigencia 12 meses</li>
-            <li>✓ Excel · Word · ODS · ODT · MS Project</li>
-            <li>✓ 1 PC (dualboot incluido)</li>
-            <li>✓ Todas las actualizaciones</li>
-            <li>✓ Soporte directo del autor</li>
-          </ul>
-          <a href="https://wa.me/51998839090?text=Hola%2C%20quiero%20la%20licencia%20Anual%20de%20IngePresupuestos" target="_blank" rel="noopener" class="btn btn-ghost">Comprar</a>
         </div>
       </div>
+      <p class="compare-note" style="text-align:center;margin-top:22px;">Código abierto en <a href="https://github.com/tuxiasumari/ingepresupuestos" target="_blank" rel="noopener">GitHub</a>. Si te resulta útil, puedes apoyar el proyecto con una donación desde la app o una estrella en el repositorio. ¡Gracias!</p>
     </div>
   </section>
 
@@ -671,7 +620,7 @@
         </details>
         <details class="faq-item">
           <summary>¿Cómo se instala en Linux?</summary>
-          <p>Descarga el <code>.AppImage</code>, dale permisos de ejecución y doble click. No requiere instalación.</p>
+          <p>Dos opciones: descarga el <code>.AppImage</code>, dale permisos de ejecución y doble click (sin instalar); o instálalo como <strong>Flatpak</strong> con <code>flatpak install --from https://downloads.ingepresupuestos.com/flatpak/ingepresupuestos.flatpakref</code> (edición completa, con actualizaciones automáticas y reportes ODT/ODS).</p>
         </details>
         <details class="faq-item">
           <summary>¿Funciona con MS Project?</summary>
@@ -698,14 +647,15 @@
           <strong>IngePresupuestos</strong>
         </div>
         <p>Software de presupuestos de obra.</p>
-        <p class="footer-copy">© 2026 Ing. Marco Sumari</p>
+        <p class="footer-copy">© 2026 Sumari SAC · Ing. Marco Sumari</p>
       </div>
       <div class="footer-col">
         <h4>Producto</h4>
         <ul>
           <li><a href="#features">Características</a></li>
-          <li><a href="#precios">Precios</a></li>
+          <li><a href="#precios">Software libre</a></li>
           <li><a href="#descargar">Descargar</a></li>
+          <li><a href="/apoyar">💛 Apoyar el proyecto</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -715,6 +665,8 @@
           <li><a href="/blog/">Blog</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="mailto:ing.sumari@gmail.com?subject=Bug%20-%20IngePresupuestos">Reportar bug</a></li>
+          <li><a href="https://github.com/tuxiasumari/ingepresupuestos" target="_blank" rel="noopener">Código abierto (GitHub)</a></li>
+          <li><a href="/privacidad">Privacidad</a></li>
         </ul>
       </div>
       <div class="footer-col">
