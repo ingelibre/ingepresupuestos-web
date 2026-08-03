@@ -24,3 +24,7 @@ dist/
 
 # Capturas crudas (fuente) — la versión optimizada vive en images/screenshots/
 captura/
+
+# temporales de build y de wrangler
+.wrangler/
+.cover-build/
