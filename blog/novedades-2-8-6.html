@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#273445">
+
+  <title>Novedades de IngePresupuestos 2.8.6 · IngePresupuestos</title>
+  <meta name="description" content="Color por proyecto en el mosaico, encabezados de reporte que escalan en A1 y A3, selector de predecesoras en el Gantt y datos de empresa unificados.">
+  <meta name="author" content="Ing. Marco Sumari">
+
+  <link rel="canonical" href="https://ingepresupuestos.com/blog/novedades-2-8-6.html">
+
+  <meta property="og:site_name" content="IngePresupuestos">
+  <meta property="og:title" content="Novedades de IngePresupuestos 2.8.6">
+  <meta property="og:description" content="Color por proyecto en el mosaico, encabezados de reporte que escalan en A1 y A3, selector de predecesoras en el Gantt y datos de empresa unificados.">
+  <meta property="og:image" content="https://ingepresupuestos.com/images/blog/colores-proyecto-2-8-6.jpg">
+  <meta property="og:url" content="https://ingepresupuestos.com/blog/novedades-2-8-6.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_PE">
+  <meta property="article:published_time" content="2026-08-01">
+  <meta property="article:author" content="Ing. Marco Sumari">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Novedades de IngePresupuestos 2.8.6">
+  <meta name="twitter:description" content="Color por proyecto en el mosaico, encabezados de reporte que escalan en A1 y A3, selector de predecesoras en el Gantt y datos de empresa unificados.">
+  <meta name="twitter:image" content="https://ingepresupuestos.com/images/blog/colores-proyecto-2-8-6.jpg">
+
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/blog/blog.css?v=2">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Novedades de IngePresupuestos 2.8.6",
+    "description": "Color por proyecto en el mosaico, encabezados de reporte que escalan en A1 y A3, selector de predecesoras en el Gantt y datos de empresa unificados.",
+    "image": "https://ingepresupuestos.com/images/blog/colores-proyecto-2-8-6.jpg",
+    "datePublished": "2026-08-01",
+    "dateModified": "2026-08-01",
+    "author": { "@type": "Person", "name": "Ing. Marco Sumari" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IngePresupuestos",
+      "logo": { "@type": "ImageObject", "url": "https://ingepresupuestos.com/images/logo.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ingepresupuestos.com/blog/novedades-2-8-6.html" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ingepresupuestos.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ingepresupuestos.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Novedades de IngePresupuestos 2.8.6", "item": "https://ingepresupuestos.com/blog/novedades-2-8-6.html" }
+    ]
+  }
+  </script>
+
+  <!-- OPCIONAL: si el artículo tiene FAQ, edita estas preguntas. Si no, borra este bloque. -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cómo actualizo a la versión 2.8.6?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Si ya tienes IngePresupuestos instalado, la aplicación te avisa sola cuando hay una versión nueva. También puedes descargarla manualmente desde ingepresupuestos.com: instalador o versión portable para Windows, AppImage o paquete .tar.gz para Linux."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se pierden mis proyectos al actualizar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Los proyectos y la configuración se guardan aparte del programa, así que la actualización los conserva tal cual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Para qué sirve el color de los proyectos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Es una etiqueta visual libre: cada quien lo usa como necesite. Por ejemplo para separar proyectos por cliente, marcar los que están por vencer o distinguir los que ya se presentaron. Se asigna con clic derecho sobre la tarjeta, en la opción Color."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿IngePresupuestos sigue siendo gratuito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Desde la versión 2.8.0 es software libre bajo licencia GPL-3.0, con todas las funciones incluidas y sin pagos."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="/images/logo.png" alt="IngePresupuestos" width="32" height="32">
+        <span>IngePresupuestos</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/#features">Características</a>
+        <a href="/#precios">Precios</a>
+        <a href="https://docs.ingepresupuestos.com">Manual</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#descargar">Descargar</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ ARTÍCULO ============ -->
+  <article class="article">
+    <div class="container container-narrow">
+
+      <nav class="breadcrumb" aria-label="Migas de pan">
+        <a href="/">Inicio</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        Novedades de IngePresupuestos 2.8.6
+      </nav>
+
+      <header class="article-header">
+        <span class="tag">Novedades</span>
+        <h1>Novedades de IngePresupuestos 2.8.6</h1>
+        <div class="article-meta">
+          <strong>Ing. Marco Sumari</strong>
+          <span>·</span>
+          <time datetime="2026-08-01">1 de agosto de 2026</time>
+        </div>
+      </header>
+
+      <img class="article-cover" src="/images/blog/colores-proyecto-2-8-6.jpg" alt="IngePresupuestos 2.8.6: color por proyecto en las tarjetas del mosaico" loading="eager">
+
+      <div class="article-body">
+
+        <p>La versión 2.8.6 ya está disponible. Esta entrega salió casi entera de lo
+        que nos escribieron ustedes: dos usuarios reportaron que el logo salía diminuto
+        al imprimir el cronograma en planos grandes, otro pidió una forma más rápida de
+        enlazar predecesoras en el Gantt, y de ahí se fue armando el resto.</p>
+
+        <h2>Un color para cada proyecto</h2>
+
+        <p>Ahora puedes pintar cada tarjeta de Inicio como si fuera un post-it. Clic
+        derecho sobre el proyecto, <strong>Color</strong>, y eliges entre siete tonos.</p>
+
+        <figure>
+          <img class="zoomable" src="/images/blog/colores-menu-2-8-6.jpg"
+               alt="Mosaico de proyectos con tarjetas de colores y el submenú Color abierto"
+               loading="lazy" width="1400" height="959">
+          <figcaption>Los tonos del menú son exactamente los que verás en la tarjeta.</figcaption>
+        </figure>
+
+        <p>Sirve para lo que cada uno necesite: separar por cliente, marcar los que están
+        por vencer, distinguir los que ya presentaste. Los tonos son suaves a propósito
+        —el nombre y el monto siguen leyéndose sin esfuerzo— y en modo Lista el color
+        aparece como una franja al inicio de cada fila.</p>
+
+        <h2>El logo, por fin como debe verse</h2>
+
+        <p>Si exportabas el cronograma en A1 o A3 habrás notado que el logo salía diminuto,
+        perdido en la hoja. Ya no: el encabezado ahora crece con el tamaño del papel.</p>
+
+        <p>Y de paso se corrigieron dos cosas más:</p>
+
+        <ul>
+          <li><strong>Los logos anchos ya no se deforman.</strong> Si tu logo es alargado,
+          de esos con el nombre de la empresa al costado, antes se aplastaba. Ahora
+          conserva su proporción.</li>
+          <li><strong>El logo ya no reemplaza a la razón social.</strong> Antes, poner un
+          logo hacía desaparecer el nombre de la empresa del encabezado. Ahora van juntos,
+          como cabría esperar.</li>
+        </ul>
+
+        <p>También hay un control de <strong>tamaño del logo</strong> en Formato de reporte,
+        por si lo quieres más grande o más discreto.</p>
+
+        <h2>Tus datos de empresa, en un solo lugar</h2>
+
+        <p>Había dos pantallas distintas para configurar la empresa y el logo, y no quedaba
+        claro cuál mandaba. Ahora son la misma configuración: cambias en una y se refleja
+        en la otra.</p>
+
+        <p>Además, <strong>el RUC, la dirección y el teléfono ahora sí aparecen</strong> en
+        la portada del PDF. Antes se guardaban pero no se imprimían en ningún lado. Y el
+        logo, que solo salía en PDF, ahora también va en los reportes de
+        <strong>Word y Excel</strong>.</p>
+
+        <h2>Predecesoras del Gantt sin buscar números</h2>
+
+        <p>Para enlazar tareas había que saber de memoria el número de fila de la
+        predecesora e ir a buscarla a ojo por toda la lista.</p>
+
+        <p>Ahora: clic derecho sobre la tarea, <strong>Predecesoras</strong>. La buscas por
+        descripción, por ítem o por número, eliges el tipo de vínculo (FC, CC, FF, CF) y el
+        desfase en días. Si prefieres seguir escribiéndolas a mano funciona igual que
+        siempre, pero si escribes un número de fila que no existe ahora te avisa en vez de
+        ignorarlo en silencio.</p>
+
+        <h2>Y si nos escribes, ahora podemos responderte</h2>
+
+        <p>En <em>Acerca de → Contacto</em> agregamos un campo de <strong>correo</strong>.
+        Parece un detalle, pero este mes llegaron sugerencias muy buenas que no pudimos
+        contestar porque no había forma de saber quién las mandó.</p>
+
+        <h2>Cómo actualizar</h2>
+
+        <p>Si ya tienes IngePresupuestos instalado, la aplicación te avisará sola de la
+        actualización. Si prefieres bajarla a mano, está en la
+        <a href="/#descargar">página de descargas</a>: instalador o versión portable para
+        Windows, AppImage o paquete <code>.tar.gz</code> para Linux.</p>
+
+        <p>Sigue siendo software libre y gratuito, con todas las funciones incluidas.</p>
+
+        <div class="share-bar" data-url="https://ingepresupuestos.com/blog/novedades-2-8-6.html" data-title="Novedades de IngePresupuestos 2.8.6">
+          <span class="share-label">Comparte este post:</span>
+          <a class="share-btn share-wa" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp"
+             href="https://wa.me/?text=Novedades%20de%20IngePresupuestos%202.8.6%20https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-2-8-6.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.519 5.27l-.999 3.648 3.97-1.617zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+          <a class="share-btn share-fb" target="_blank" rel="noopener" aria-label="Compartir en Facebook"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-2-8-6.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a class="share-btn share-x" target="_blank" rel="noopener" aria-label="Compartir en X (Twitter)"
+             href="https://twitter.com/intent/tweet?text=Novedades%20de%20IngePresupuestos%202.8.6&url=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-2-8-6.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="share-btn share-in" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn"
+             href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-2-8-6.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <button class="share-btn share-copy" type="button" aria-label="Copiar enlace">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </button>
+        </div>
+
+
+      </div>
+
+      <!-- CTA: invita a descargar (no lo quites, es lo que convierte) -->
+      <div class="article-cta">
+        <h3>Haz tu presupuesto en minutos, no en días</h3>
+        <p>IngePresupuestos genera ACU, metrados, cronograma, especificaciones técnicas con IA y 13 reportes. Pruébalo gratis.</p>
+        <a href="/#descargar" class="btn btn-primary btn-lg">Descargar gratis</a>
+      </div>
+
+      <section class="article-faq">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Cómo actualizo a la versión 2.8.6?</summary>
+          <p>Si ya tienes IngePresupuestos instalado, la aplicación te avisa sola cuando hay una versión nueva. También puedes descargarla manualmente desde ingepresupuestos.com: instalador o versión portable para Windows, AppImage o paquete .tar.gz para Linux.</p>
+        </details>
+        <details>
+          <summary>¿Se pierden mis proyectos al actualizar?</summary>
+          <p>No. Los proyectos y la configuración se guardan aparte del programa, así que la actualización los conserva tal cual.</p>
+        </details>
+        <details>
+          <summary>¿Para qué sirve el color de los proyectos?</summary>
+          <p>Es una etiqueta visual libre: cada quien lo usa como necesite. Por ejemplo para separar proyectos por cliente, marcar los que están por vencer o distinguir los que ya se presentaron. Se asigna con clic derecho sobre la tarjeta, en la opción Color.</p>
+        </details>
+        <details>
+          <summary>¿IngePresupuestos sigue siendo gratuito?</summary>
+          <p>Sí. Desde la versión 2.8.0 es software libre bajo licencia GPL-3.0, con todas las funciones incluidas y sin pagos.</p>
+        </details>
+      </section>
+
+      <!-- Autor -->
+      <div class="author-box">
+        <img src="/images/logo.png" alt="Ing. Marco Sumari">
+        <div>
+          <div class="author-name">Ing. Marco Sumari</div>
+          <div class="author-role">Ingeniero civil y creador de IngePresupuestos</div>
+        </div>
+      </div>
+
+      <p class="article-back"><a href="/blog/">← Volver al blog</a></p>
+
+    </div>
+  </article>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contacto" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="/images/logo.png" alt="Logo de IngePresupuestos" width="36" height="36">
+          <strong>IngePresupuestos</strong>
+        </div>
+        <p>Software de presupuestos de obra.</p>
+        <p class="footer-copy">© 2026 Ing. Marco Sumari</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="/#features">Características</a></li>
+          <li><a href="/#precios">Precios</a></li>
+          <li><a href="/#descargar">Descargar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="https://docs.ingepresupuestos.com">Manual de usuario</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:ing.sumari@gmail.com">ing.sumari@gmail.com</a></li>
+          <li><a href="https://wa.me/51998839090" target="_blank" rel="noopener">WhatsApp +51 998 839 090</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/blog/blog.js?v=2"></script>
+</body>
+</html>

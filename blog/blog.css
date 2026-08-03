@@ -348,3 +348,24 @@
   .article-cta { padding: 28px 22px; }
   .blog-head h1 { font-size: 1.7rem; }
 }
+
+/* Video embebido responsivo 16:9 */
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  margin: 1.6rem 0 1rem;
+  background: #101922;
+  box-shadow: 0 8px 28px rgba(16, 25, 34, .28);
+}
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
