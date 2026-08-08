@@ -46,7 +46,7 @@
     "name": "IngePresupuestos",
     "operatingSystem": "Windows, Linux",
     "applicationCategory": "BusinessApplication",
-    "description": "Software LIBRE de presupuestos de obra con IA: genera especificaciones técnicas, ACU, metrados, cronograma Gantt y 13 reportes. Compatible con S10, Delphin y PowerCost. Multiplataforma, offline, código abierto (GPL-3.0). Gratis, con todas las funciones incluidas.",
+    "description": "Software de presupuestos de obra con IA: genera especificaciones técnicas, ACU, metrados, cronograma Gantt y 13 reportes. Compatible con S10, Delphin y PowerCost. Multiplataforma y offline. Gratis para empezar: reportes PDF sin límite; la exportación editable requiere licencia.",
     "url": "https://ingepresupuestos.com/",
     "image": "https://ingepresupuestos.com/images/logo.png",
     "author": {
@@ -55,13 +55,16 @@
       "email": "ing.sumari@gmail.com"
     },
     "inLanguage": "es",
-    "license": "https://www.gnu.org/licenses/gpl-3.0.html",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "description": "Software libre y gratuito bajo licencia GPL-3.0. App completa sin límites: todos los reportes (PDF, Excel, Word, ODS, ODT, MS Project), importadores nativos, cronogramas y control de obra. Sin tarjeta, sin registro."
-    }
+    "offers": [
+      { "@type": "Offer", "name": "Gratis", "price": "0", "priceCurrency": "PEN",
+        "description": "Presupuestos, ACU, cronogramas, registro de control de obra, importadores y reportes del presupuesto en PDF. Sin límite de tiempo, sin registro." },
+      { "@type": "Offer", "name": "Licencia anual", "price": "80", "priceCurrency": "PEN",
+        "url": "https://ingepresupuestos.com/licencia",
+        "description": "Exportación editable y reportes de Control de Obra por 1 año con actualizaciones." },
+      { "@type": "Offer", "name": "Licencia perpetua", "price": "300", "priceCurrency": "PEN",
+        "url": "https://ingepresupuestos.com/licencia",
+        "description": "Exportación editable y reportes de Control de Obra para siempre, con 2 años de actualizaciones." }
+    ]
   }
   </script>
 
@@ -163,7 +166,7 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="container hero-center">
-      <h1>Software libre de presupuestos<br>de obra</h1>
+      <h1>El software de presupuestos<br>de obra</h1>
       <p class="hero-sub">Multiplataforma. Offline. Formato abierto.<br>Compatible con S10, Delphin y PowerCost.</p>
       <div class="hero-ctas">
         <a href="#descargar" class="btn btn-primary btn-lg">Descargar IngePresupuestos</a>
@@ -448,7 +451,7 @@
   <section id="descargar" class="download-section">
     <div class="container">
       <h2>Descargar</h2>
-      <p class="download-sub">Software libre y de código abierto (GPL-3.0).</p>
+      <p class="download-sub">Gratis para empezar · prueba premium completa por 30 días.</p>
       <div class="dl-row">
         <div class="dl-group">
           <span class="dl-group-label">IngePresupuestos</span>
@@ -514,7 +517,7 @@
   <section id="comparativa" class="section">
     <div class="container">
       <div class="section-head">
-        <h2>Una alternativa libre</h2>
+        <h2>Una alternativa moderna</h2>
         <p>Todo lo que necesitas para tus presupuestos de obra — más Linux, IA, Control de Obra y código abierto.</p>
       </div>
       <div class="compare-wrap">
@@ -558,7 +561,7 @@
               <td><span class="no">—</span></td>
             </tr>
             <tr>
-              <th scope="row">Código abierto (GPL-3.0)</th>
+              <th scope="row">Gratis para empezar (PDF sin límite)</th>
               <td class="compare-hero"><span class="ck">✓</span></td>
               <td><span class="no">—</span></td>
             </tr>
@@ -569,29 +572,52 @@
     </div>
   </section>
 
-  <!-- ============ SOFTWARE LIBRE ============ -->
+  <!-- ============ LICENCIAS ============ -->
   <section id="precios" class="section bg-light">
     <div class="container">
       <div class="section-head">
-        <h2>Libre para siempre</h2>
-        <p>IngePresupuestos es <strong>software libre</strong> (licencia GPL-3.0): puedes usarlo, estudiarlo y compartirlo. Con todas las funciones y reportes incluidos, <strong>tu imaginación es el límite</strong>.</p>
+        <h2>Licenciamiento como debería ser</h2>
+        <p><strong>Gratis para lo esencial, sin límite de tiempo</strong> — presupuestos, ACU, cronogramas y los reportes del presupuesto en PDF. La licencia desbloquea la <strong>exportación editable</strong> (Excel · Word · ODS · ODT · MS Project) y los <strong>reportes de Control de Obra</strong>, con 30 días de prueba completa al instalar.</p>
       </div>
-      <div class="pricing-grid" style="justify-content:center;">
-        <div class="pricing-card pricing-pop">
-          <span class="pricing-badge">Software libre</span>
-          <h3>Software libre y de código abierto</h3>
-          <p style="color:#667885;margin:2px 0 16px;font-size:.98rem;">Licencia GPL-3.0 · úsalo, estúdialo y compártelo.</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Gratis</h3>
+          <p style="font-size:1.8rem;font-weight:800;color:var(--slate-900);margin:2px 0 2px;">S/ 0</p>
+          <p style="color:#667885;margin:0 0 14px;font-size:.94rem;">Para siempre · sin registro</p>
           <ul>
             <li>✓ App completa, sin límite de proyectos</li>
-            <li>✓ Todos los reportes: PDF · Excel · Word · ODS · ODT · MS Project</li>
-            <li>✓ Gantt · Curva S · Valorizado · Control de Obra</li>
-            <li>✓ Importadores nativos (S10, Delphin, PowerCost)</li>
+            <li>✓ Reportes del presupuesto en PDF</li>
+            <li>✓ Importadores S10 · Delphin · PowerCost</li>
             <li>✓ Tuxia IA con tu propia API key</li>
-            <li>✓ Sin candados: todas las funciones abiertas</li>
           </ul>
+          <a href="#descargar" class="btn btn-ghost" style="border-color:#D4D9DE;color:#273445;">Descargar gratis</a>
+        </div>
+        <div class="pricing-card">
+          <h3>Anual</h3>
+          <p style="font-size:1.8rem;font-weight:800;color:var(--slate-900);margin:2px 0 2px;"><span data-pen="S/ 80" data-usd="US$ 25">S/ 80</span><span style="font-size:.95rem;font-weight:600;color:#667885;"> / año</span></p>
+          <p style="color:#667885;margin:0 0 14px;font-size:.94rem;">1 PC · 1 año de actualizaciones</p>
+          <ul>
+            <li>✓ Todo lo del plan gratis</li>
+            <li>✓ Exporta Excel · Word · ODS · ODT · MS Project</li>
+            <li>✓ Reportes de Control de Obra</li>
+            <li>✓ Soporte por WhatsApp</li>
+          </ul>
+          <a href="/licencia" class="btn btn-primary">Comprar licencia</a>
+        </div>
+        <div class="pricing-card pricing-pop">
+          <span class="pricing-badge">Más elegida</span>
+          <h3>Perpetua</h3>
+          <p style="font-size:1.8rem;font-weight:800;color:var(--slate-900);margin:2px 0 2px;"><span data-pen="S/ 300" data-usd="US$ 90">S/ 300</span><span style="font-size:.95rem;font-weight:600;color:#667885;"> una vez</span></p>
+          <p style="color:#667885;margin:0 0 14px;font-size:.94rem;">1 PC · para siempre · 2 años de updates</p>
+          <ul>
+            <li>✓ Exportación editable y reportes de Control de Obra</li>
+            <li>✓ 2 años de actualizaciones incluidas</li>
+            <li>✓ Tu versión sigue funcionando después, siempre</li>
+          </ul>
+          <a href="/licencia" class="btn btn-primary">Comprar licencia</a>
         </div>
       </div>
-      <p class="compare-note" style="text-align:center;margin-top:22px;">Código abierto en <a href="https://github.com/tuxiasumari/ingepresupuestos" target="_blank" rel="noopener">GitHub</a>. Si te resulta útil, puedes apoyar el proyecto con una donación desde la app o una estrella en el repositorio. ¡Gracias!</p>
+      <p class="compare-note" style="text-align:center;margin-top:22px;">Activación offline por clave firmada — tus datos nunca salen de tu equipo. Compra por Yape o WhatsApp: <a href="/licencia">ver detalles, medios de pago y preguntas frecuentes</a>.</p>
     </div>
   </section>
 
@@ -653,9 +679,9 @@
         <h4>Producto</h4>
         <ul>
           <li><a href="#features">Características</a></li>
-          <li><a href="#precios">Software libre</a></li>
+          <li><a href="#precios">Precios</a></li>
           <li><a href="#descargar">Descargar</a></li>
-          <li><a href="/apoyar">💛 Apoyar el proyecto</a></li>
+          <li><a href="/licencia">🔑 Licencias y precios</a></li>
         </ul>
       </div>
       <div class="footer-col">
