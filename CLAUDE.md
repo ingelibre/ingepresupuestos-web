@@ -6,7 +6,7 @@ de obra desarrollado por Ing. Marco Sumari.
 URL en producción: **https://ingepresupuestos.com**
 
 Repo del **producto** (código fuente): `~/Proyectos/ingepresupuestos/app/`
-→ `github.com/tuxiasumari/ingepresupuestos-pyside6`
+→ `github.com/ingelibre/ingepresupuestos`
 
 Este repo es **independiente** del producto a propósito. Cambios acá no
 disparan builds del producto y viceversa.
@@ -158,14 +158,15 @@ a un lado y texto al otro, mucho aire, tipografía grande.
 ├─ Impact: "Trabaja offline si quieres" (slate-900, texto centrado)
 │
 ├─ Descargar (gradiente naranja, cards Win/Linux)
-│  "Prueba completa por 30 días."
+│  "Gratis y completo, para siempre · software libre bajo GPL-3.0."
+│  4 canales: .exe · Microsoft Store · AppImage · Flatpak (sin portables desde la 3.0)
 │
 ├─ Comparativa (blanco, tabla "Compara y decide" vs S10/Delphin/PowerCost)
 │  Columna IngePresupuestos resaltada en naranja. Nota legal de marcas.
 │
-├─ Licenciamiento (gris, 3 cards: Gratis / Perpetua S/300≈$100 / Anual S/80≈$20, geo-swap)
-│  "Licenciamiento como debería ser — Elección sin compromiso"
-│  Botones "Comprar" → WhatsApp directo con mensaje pre-llenado
+├─ (La sección de licenciamiento de pago se retiró: la 3.0 vuelve a ser
+│   software libre. /licencia redirige a /apoyar, que pide aporte VOLUNTARIO
+│   por Yape/Plin y Liberapay — ningún aporte desbloquea nada.)
 │
 ├─ FAQ (blanco, 8 preguntas, acordeón <details>; espejadas en JSON-LD FAQPage —
 │  si se edita una pregunta, actualizar también el JSON-LD del <head>)
@@ -222,9 +223,9 @@ python3 -m http.server 8765
 
 | Conexión | Cómo se mantiene |
 |----------|------------------|
-| **URL de descarga** | `script.js` consulta `downloads.ingepresupuestos.com/version.json` (Cloudflare R2). |
+| **URL de descarga** | `script.js` consulta `downloads.ingepresupuestos.com/version.json` (Cloudflare R2). Solo lee `windows_installer` y `linux_appimage`: la Store y el repo Flatpak se actualizan solos y sus enlaces son fijos en el HTML. El `version.json` de la raíz de ESTE repo es una copia vieja sin uso — el que manda es el de R2. |
 | **Versión en hero** | Misma API de R2. Fallback: "— no disponible". |
-| **Precios** | Hardcoded en `index.html` (sección `#precios`) con atributos `data-pen`/`data-usd`: Perú ve soles (S/ 300 perpetua, S/ 80 anual), el resto dólares ($100, $20). Geodetección en `script.js` vía `/cdn-cgi/trace` de Cloudflare (mismo origen, sin cookies); fallback por zona horaria `America/Lima`. Botones "Comprar" → WhatsApp directo (`wa.me/51998839090`) con mensaje pre-llenado por tipo de licencia. |
+| **Precios** | **Ya no hay.** La app es software libre GPL-3.0 y gratuita; `/apoyar` pide aporte voluntario. La geodetección soles/dólares de `script.js` (`/cdn-cgi/trace`, fallback por zona horaria `America/Lima`) sigue viva solo para los montos sugeridos de aporte. |
 | **Íconos** | `tuxia-icon.png` copiado de `resources/icons/elementary/24/tuxia.png` del producto. `ingeconverter-icon.png` copiado de `~/ingeconverter/resources/icons/ingeconverter_256.png`. Si se actualizan, sincronizar manualmente. |
 
 ---
@@ -315,4 +316,4 @@ Blog en `blog/` (no es un CMS: HTML estático, un archivo por post). Se publica 
 - **Autor producto**: Ing. Marco Sumari
 - **Email**: ing.sumari@gmail.com
 - **WhatsApp**: +51 998 839 090
-- **Repo producto**: github.com/tuxiasumari/ingepresupuestos-pyside6 (privado)
+- **Repo producto**: github.com/ingelibre/ingepresupuestos

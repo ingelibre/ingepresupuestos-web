@@ -550,7 +550,9 @@ code {
   font-size: 10px; font-weight: 600; background: rgba(255,255,255,0.2);
   padding: 2px 8px; border-radius: 20px; vertical-align: middle; text-transform: none;
 }
-.dl-group-cards { display: flex; gap: 10px; margin-bottom: 8px; justify-content: center; flex-wrap: wrap; align-items: flex-start; }
+/* margin-bottom generoso: al retirar los enlaces «Portable» (3.0) las tarjetas
+   quedaban pegadas al bloque del comando Flatpak. */
+.dl-group-cards { display: flex; gap: 10px; margin-bottom: 18px; justify-content: center; flex-wrap: wrap; align-items: flex-start; }
 .dl-group-alt { font-size: 12px; color: rgba(255,255,255,0.7); }
 .dl-group-alt a { color: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 .dl-item { display: flex; flex-direction: column; align-items: center; gap: 6px; }
@@ -697,7 +699,9 @@ code {
   .nav, .hero-ctas, .download-section, .footer { display: none; }
 }
 
-/* ── Canales alternativos de instalación (Store / Winget) ── */
+/* ── Canales alternativos de instalación (Store / Flatpak) ──
+   Las clases .dl-winget* quedaron del bloque de winget, que se retiró
+   el 2026-08-15; hoy solo las usa el comando de Flatpak. */
 .dl-channels        { margin-top: 28px; text-align: center; }
 .dl-channels-label  { display: block; font-size: 13px; letter-spacing: .05em;
                       text-transform: uppercase; color: var(--slate-300); margin-bottom: 12px; }
@@ -720,3 +724,236 @@ code {
                       flex: 1; min-width: 0; align-self: center; }
 .dl-flatpak-note    { text-align: center; font-size: 13px; color: rgba(255,255,255,0.9); margin: 2px auto 8px; max-width: 640px; }
 .dl-flatpak-note a  { color: #fff; text-decoration: underline; }
+
+/* ── Aporte «paga lo que quieras» (sección #apoyar) ────────────────────── */
+.aporte-card {
+  background: #fff;
+  border: 1px solid #E4E8EC;
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+.aporte-intro {
+  color: var(--slate-500);
+  font-size: 15.5px;
+  line-height: 1.65;
+  margin: 0 0 12px;
+}
+
+/* El «no puedo aportar» tiene que verse tan claro como los montos. */
+.aporte-cero {
+  margin: 16px 0 0;
+  font-size: 15px;
+  color: var(--slate-500);
+}
+.aporte-link {
+  color: var(--orange-dk);
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.aporte-pago {
+  margin-top: 26px;
+  padding-top: 24px;
+  border-top: 1px solid #E4E8EC;
+}
+
+.aporte-metodos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.aporte-metodo h4 {
+  margin: 0 0 12px;
+  font-size: 16px;
+  color: var(--slate-900);
+}
+.aporte-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  color: var(--orange-dk);
+  background: var(--orange-soft);
+  border-radius: 999px;
+  padding: 3px 9px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.aporte-qr {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-sm);
+  border: 1px solid #E4E8EC;
+}
+.aporte-numero-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0 8px;
+  flex-wrap: wrap;
+}
+.aporte-numero {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: .02em;
+  color: var(--slate-900);
+}
+.aporte-copiar {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--slate-700);
+  background: var(--silver-100);
+  border: 1px solid #D4D9DE;
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.aporte-copiar.copied { background: var(--orange-soft); border-color: var(--orange); color: var(--orange-dk); }
+.aporte-nota {
+  font-size: 13.5px;
+  color: var(--slate-300);
+  line-height: 1.55;
+  margin: 0;
+}
+.aporte-paypal { margin-top: 12px; display: inline-block; }
+
+@media (max-width: 720px) {
+  .aporte-card     { padding: 24px 18px; }
+  .aporte-metodos  { grid-template-columns: 1fr; gap: 28px; }
+  /* En el celular no puedes escanear el QR de tu propia pantalla:
+     ahí manda el número copiable, no el código. */
+  .aporte-qr       { display: none; }
+}
+
+/* ── Modal de aporte (aparece al iniciar una descarga) ─────────────────── */
+.aporte-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  background: rgba(26, 36, 52, 0.72);
+  backdrop-filter: blur(2px);
+}
+.aporte-modal.open { display: flex; }
+
+.aporte-modal-box {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 32px 30px 28px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+  animation: aporteIn .22s ease-out;
+}
+@keyframes aporteIn {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aporte-modal-box { animation: none; }
+}
+
+.aporte-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--slate-300);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+}
+.aporte-modal-close:hover { color: var(--slate-900); background: var(--silver-100); }
+
+.aporte-modal-box h3 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 1.25;
+  color: var(--slate-900);
+}
+
+/* En el modal el «no aportar» es un <button>: que se vea igual que el enlace. */
+button.aporte-link {
+  font: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .aporte-modal     { padding: 12px; }
+  .aporte-modal-box { padding: 26px 18px 22px; max-height: calc(100vh - 24px); }
+  .aporte-modal-box h3 { font-size: 20px; }
+}
+
+/* ── Modal: cabecera + botón de descarga ───────────────────────────────── */
+.aporte-modal-plataforma {
+  margin: -8px 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--slate-300);
+}
+
+/* El botón más grande y visible del modal. Nunca se deshabilita ni se
+   condiciona a elegir monto: en el momento en que eso pase, es un paywall. */
+.aporte-descargar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin: 22px 0 8px;
+  padding: 16px 22px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--orange);
+  border-radius: var(--radius);
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(243, 115, 41, 0.32);
+  transition: background .15s, transform .1s;
+}
+.aporte-descargar:hover  { background: var(--orange-dk); color: #fff; }
+.aporte-descargar:active { transform: translateY(1px); }
+.aporte-descargar-icono  { font-size: 19px; }
+
+.aporte-cero-modal {
+  margin: 0 0 4px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--slate-300);
+}
+
+/* El texto del modal es corto a propósito: la explicación larga vive en #apoyar. */
+.aporte-intro-modal {
+  font-size: 16.5px;
+  color: var(--slate-700);
+  margin-bottom: 4px;
+}
+
+/* Correo de PayPal: más chico que el número de Yape, que sí es el canal principal. */
+.aporte-correo {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--slate-900);
+  word-break: break-all;
+}
+
+/* Liberapay es la vía principal desde el extranjero; el correo de PayPal
+   queda debajo como respaldo, en menor jerarquía. */
+.aporte-liberapay { display: inline-block; margin: 4px 0 14px; }
+.aporte-nota-alt  { margin-bottom: 6px; color: var(--slate-500); }

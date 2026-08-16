@@ -3,16 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Licencias · IngePresupuestos</title>
-  <meta name="robots" content="noindex">
-  <link rel="canonical" href="https://ingepresupuestos.com/licencia">
-  <meta http-equiv="refresh" content="0; url=/licencia">
+  <meta name="theme-color" content="#273445">
+
+  <title>Apoyar el proyecto · IngePresupuestos</title>
+
+  <meta name="description" content="IngePresupuestos es software libre y gratuito bajo GPL-3.0. Si te sirve y puedes aportar, esto es lo que mantiene el proyecto vivo. Yape, Plin o Liberapay.">
+
+  <link rel="canonical" href="https://ingepresupuestos.com/apoyar">
+
+  <meta property="og:site_name" content="IngePresupuestos">
+  <meta property="og:title" content="Apoyar el proyecto · IngePresupuestos">
+  <meta property="og:description" content="Software libre y gratuito. Si te ahorró horas de trabajo y puedes aportar, eso es lo que lo mantiene vivo.">
+  <meta property="og:image" content="https://ingepresupuestos.com/images/og-banner.jpg">
+  <meta property="og:url" content="https://ingepresupuestos.com/apoyar">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/images/favicon-16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <!-- Las versiones 2.8.x de la app enlazan aquí desde «Apoyar el proyecto».
-       El modelo cambió a licencias (2026-08): esta página solo redirige. -->
-  <p>El apoyo al proyecto ahora es mediante licencias.
-     Te llevamos a <a href="/licencia">ingepresupuestos.com/licencia</a>…</p>
-  <script>location.replace('/licencia');</script>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="/images/logo.png" alt="IngePresupuestos" width="32" height="32">
+        <span>IngePresupuestos</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/#features">Características</a>
+        <a href="/#descargar">Descargar</a>
+        <a href="https://docs.ingepresupuestos.com">Manual</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#faq">FAQ</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ APORTE ============ -->
+  <!-- Destino permanente del menú «Apoyar el proyecto» de la app y del footer.
+       El widget es el mismo marcado del modal de index.html; lo maneja
+       initAporte() en script.js. Si cambias montos o medios de pago,
+       cámbialos también allá. -->
+  <section class="section bg-light apoyar-page">
+    <div class="container container-narrow">
+      <div class="section-head">
+        <h2>Es software libre. Ayúdanos a mantenerlo.</h2>
+        <p>La app completa, gratis y para siempre: sin funciones bloqueadas, sin vencimiento y con el código publicado. No hay nada que comprar.</p>
+      </div>
+
+      <div class="aporte-card aporte-widget">
+        <p class="aporte-intro">Soy <strong>Marco Sumari</strong>, ingeniero civil. Desarrollo IngePresupuestos en mis noches y fines de semana, y lo comparto libre para que cualquiera pueda usarlo.</p>
+        <p class="aporte-intro">Si te ahorró horas de trabajo, <strong>apóyanos a seguir manteniéndolo y mejorándolo</strong>.</p>
+
+
+        <p class="aporte-cero">
+          ¿Ahora no puedes? <a href="/#descargar" class="aporte-link">Descárgalo igual, sin aportar nada</a> — es exactamente el mismo software.
+        </p>
+
+        <!-- Bloque de pago: aparece al elegir un monto -->
+        <div class="aporte-pago">
+
+          <div class="aporte-metodos">
+            <div class="aporte-metodo">
+              <h4>Yape o Plin <span class="aporte-tag">Perú</span></h4>
+              <img class="aporte-qr" src="/images/qr_yape.png"
+                   alt="Código QR de Yape de Marco Sumari" width="200" height="200" loading="lazy">
+              <p class="aporte-numero-wrap">
+                <span class="aporte-numero">998 839 090</span>
+                <button type="button" class="aporte-copiar" data-copy="998839090"
+                        aria-label="Copiar número de Yape">Copiar</button>
+              </p>
+              <p class="aporte-nota">A nombre de Marco Sumari. El mismo número recibe <strong>Plin</strong> desde Interbank, BBVA o Scotiabank.</p>
+            </div>
+
+            <div class="aporte-metodo">
+              <h4>Desde el extranjero <span class="aporte-tag">Internacional</span></h4>
+              <p class="aporte-nota">Un clic, con tarjeta o PayPal, desde cualquier país.</p>
+              <a class="btn btn-primary aporte-liberapay"
+                 href="https://liberapay.com/ingelibre/donate"
+                 target="_blank" rel="noopener">Aportar por Liberapay</a>
+              <p class="aporte-nota aporte-nota-alt">¿Prefieres PayPal directo? Envía a este correo:</p>
+              <p class="aporte-numero-wrap">
+                <span class="aporte-correo">ing.marco.sumari@gmail.com</span>
+                <button type="button" class="aporte-copiar" data-copy="ing.marco.sumari@gmail.com"
+                        aria-label="Copiar correo de PayPal">Copiar</button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contacto" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="/images/logo.png" alt="Logo de IngePresupuestos" width="36" height="36">
+          <strong>IngePresupuestos</strong>
+        </div>
+        <p>Software libre de presupuestos de obra.</p>
+        <p class="footer-copy">© 2026 Ing. Marco Sumari · Publicado bajo <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">GPL-3.0-or-later</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="/#features">Características</a></li>
+          <li><a href="/#descargar">Descargar</a></li>
+          <li><a href="/apoyar">Apoyar el proyecto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="https://docs.ingepresupuestos.com">Manual de usuario</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="mailto:ing.sumari@gmail.com?subject=Bug%20-%20IngePresupuestos">Reportar bug</a></li>
+          <li><a href="https://github.com/tuxiasumari/ingepresupuestos" target="_blank" rel="noopener">Código abierto (GitHub)</a></li>
+          <li><a href="/privacidad">Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:ing.sumari@gmail.com">ing.sumari@gmail.com</a></li>
+          <li><a href="https://wa.me/51998839090" target="_blank" rel="noopener">WhatsApp +51 998 839 090</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
 </body>
 </html>

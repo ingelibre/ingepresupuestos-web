@@ -7,10 +7,13 @@
 
   const VERSION_URL = 'https://downloads.ingepresupuestos.com/version.json';
 
+  // Ojo: estas funciones también corren en /apoyar, que no tiene #latest-version
+  // ni tarjetas de descarga. De ahí los accesos opcionales.
   function setFallback() {
-    document.getElementById('latest-version').textContent = '— no disponible';
+    const v = document.getElementById('latest-version');
+    if (v) v.textContent = '— no disponible';
     const fallback = 'https://ingepresupuestos.com/#descargar';
-    document.querySelectorAll('#dl-win, #dl-linux, #dl-win-zip, #dl-linux-tar')
+    document.querySelectorAll('#dl-win, #dl-linux')
       .forEach(el => el.setAttribute('href', fallback));
   }
 
@@ -28,13 +31,15 @@
           label += ` · ${d.toLocaleDateString('es', { day: 'numeric', month: 'short', year: 'numeric' })}`;
         }
       }
-      document.getElementById('latest-version').textContent = label;
+      const elVer = document.getElementById('latest-version');
+      if (elVer) elVer.textContent = label;
       const dl = data.downloads || {};
+      // IngePresupuestos se entrega en 4 canales: instalador .exe y Microsoft
+      // Store en Windows; AppImage y Flatpak en Linux. Los dos últimos no
+      // salen de version.json (la Store y el repo Flatpak se actualizan solos).
       [
-        ['dl-win',       'windows_installer'],
-        ['dl-linux',     'linux_appimage'],
-        ['dl-win-zip',   'windows_portable'],
-        ['dl-linux-tar', 'linux_portable'],
+        ['dl-win',   'windows_installer'],
+        ['dl-linux', 'linux_appimage'],
       ].forEach(([id, key]) => {
         const el = document.getElementById(id);
         if (el) el.setAttribute('href', dl[key] || '#descargar');
@@ -167,7 +172,7 @@
     if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
   });
 
-  // Copiar comando winget
+  // Copiar comando de instalación (hoy solo Flatpak)
   document.querySelectorAll('.dl-winget-copy').forEach(function (btn) {
     btn.addEventListener('click', function () {
       navigator.clipboard.writeText(btn.dataset.copy).then(function () {
@@ -178,5 +183,98 @@
       });
     });
   });
+
+  // ── Aporte ────────────────────────────────────────────────────────────
+  // Sin montos sugeridos (decisión de Marco): los medios de pago se muestran
+  // siempre, no hay nada que elegir antes. Mismo marcado en el modal de
+  // index.html y en /apoyar; initAporte() los maneja a los dos.
+  function initAporte(root) {
+    root.querySelectorAll('.aporte-copiar').forEach(btn => {
+      btn.addEventListener('click', () => {
+        navigator.clipboard.writeText(btn.dataset.copy).then(() => {
+          const prev = btn.textContent;
+          btn.textContent = '¡Copiado!';
+          btn.classList.add('copied');
+          setTimeout(() => { btn.textContent = prev; btn.classList.remove('copied'); }, 1600);
+        });
+      });
+    });
+  }
+  document.querySelectorAll('.aporte-widget').forEach(initAporte);
+
+  // ── Modal de aporte tras la descarga ──────────────────────────────────
+  (function modalAporte() {
+    const modal = document.getElementById('aporte-modal');
+    if (!modal) return;
+    const caja = modal.querySelector('.aporte-modal-box');
+    let ultimoFoco = null;
+
+    const plataforma = document.getElementById('aporte-modal-plataforma');
+    const btnDl      = document.getElementById('aporte-modal-descargar');
+    const btnDlTexto = document.getElementById('aporte-descargar-texto');
+
+    function abrir() {
+      ultimoFoco = document.activeElement;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      modal.querySelector('.aporte-modal-close')?.focus();
+    }
+    function cerrar() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      ultimoFoco?.focus();
+    }
+
+    modal.addEventListener('click', e => {
+      if (e.target === modal) cerrar();                      // clic fuera de la caja
+    });
+    caja?.querySelector('.aporte-modal-close')?.addEventListener('click', cerrar);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('open')) cerrar();
+    });
+
+    // Al bajar de verdad desde el modal, cerramos: el navegador ya se lo lleva.
+    btnDl?.addEventListener('click', () => setTimeout(cerrar, 400));
+
+    // Cada origen de descarga: etiqueta que se muestra y texto del botón.
+    const ORIGENES = {
+      'dl-win':        ['Windows · Instalador .exe'],
+      'dl-linux':      ['Linux · AppImage'],
+      'dl-ic-win':     ['IngeConverter · Windows .exe'],
+      'dl-ic-win-zip': ['IngeConverter · Windows portable .zip'],
+      'dl-ic-linux':   ['IngeConverter · Linux .tar.gz'],
+      'dl-msstore':    ['Windows 10/11 · Microsoft Store', 'Ir a la Microsoft Store', true],
+    };
+
+    Object.keys(ORIGENES).forEach(id => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const [etiqueta, textoBoton, nuevaPestana] = ORIGENES[id];
+
+      el.addEventListener('click', e => {
+        const href = el.getAttribute('href') || '';
+        // Si version.json no cargó, el enlace apunta al ancla de respaldo:
+        // no interceptamos nada y que el navegador haga lo suyo.
+        if (!href || href === '#' || href.startsWith('#')) return;
+
+        e.preventDefault();
+        if (plataforma) plataforma.textContent = etiqueta;
+        if (btnDlTexto) btnDlTexto.textContent = textoBoton || 'Descargar ahora';
+        if (btnDl) {
+          btnDl.setAttribute('href', href);
+          if (nuevaPestana) {
+            btnDl.setAttribute('target', '_blank');
+            btnDl.setAttribute('rel', 'noopener');
+          } else {
+            btnDl.removeAttribute('target');
+            btnDl.removeAttribute('rel');
+          }
+        }
+        abrir();
+      });
+    });
+  })();
 
 })();
