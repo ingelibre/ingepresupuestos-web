@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#273445">
+
+  <title>Nueva versión 3.0.4: fórmula polinómica e índices INEI · IngePresupuestos</title>
+  <meta name="description" content="El INEI cambió la base a Diciembre 2025 = 100: 13 áreas y 77 índices. IngePresupuestos 3.0.4 los trae cargados desde 2013 y deja ver y editar cada monomio.">
+  <meta name="author" content="Ing. Marco Sumari">
+
+  <link rel="canonical" href="https://ingepresupuestos.com/blog/novedades-3-0-4.html">
+
+  <meta property="og:site_name" content="IngePresupuestos">
+  <meta property="og:title" content="Nueva versión 3.0.4: fórmula polinómica e índices INEI">
+  <meta property="og:description" content="El INEI cambió la base a Diciembre 2025 = 100: 13 áreas y 77 índices. IngePresupuestos 3.0.4 los trae cargados desde 2013 y deja ver y editar cada monomio.">
+  <meta property="og:image" content="https://ingepresupuestos.com/images/blog/portada-3-0-4.jpg">
+  <meta property="og:url" content="https://ingepresupuestos.com/blog/novedades-3-0-4.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_PE">
+  <meta property="article:published_time" content="2026-08-30">
+  <meta property="article:author" content="Ing. Marco Sumari">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nueva versión 3.0.4: fórmula polinómica e índices INEI">
+  <meta name="twitter:description" content="El INEI cambió la base a Diciembre 2025 = 100: 13 áreas y 77 índices. IngePresupuestos 3.0.4 los trae cargados desde 2013 y deja ver y editar cada monomio.">
+  <meta name="twitter:image" content="https://ingepresupuestos.com/images/blog/portada-3-0-4.jpg">
+
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/blog/blog.css?v=2">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Nueva versión 3.0.4: fórmula polinómica e índices INEI",
+    "description": "El INEI cambió la base a Diciembre 2025 = 100: 13 áreas y 77 índices. IngePresupuestos 3.0.4 los trae cargados desde 2013 y deja ver y editar cada monomio.",
+    "image": "https://ingepresupuestos.com/images/blog/portada-3-0-4.jpg",
+    "datePublished": "2026-08-30",
+    "dateModified": "2026-08-30",
+    "author": { "@type": "Person", "name": "Ing. Marco Sumari" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IngePresupuestos",
+      "logo": { "@type": "ImageObject", "url": "https://ingepresupuestos.com/images/logo.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ingepresupuestos.com/blog/novedades-3-0-4.html" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ingepresupuestos.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ingepresupuestos.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Nueva versión 3.0.4: fórmula polinómica e índices INEI", "item": "https://ingepresupuestos.com/blog/novedades-3-0-4.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuántos índices unificados hay en 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Son 77 índices, numerados del 01 al 95 porque la numeración tiene saltos. Rigen para 13 áreas geográficas con base Diciembre 2025 = 100, según la R.J. 016-2026-INEI." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Se aplica fórmula polinómica en obras por administración directa?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. La fórmula polinómica es de las obras por contrata: reajusta el precio pactado con un contratista. En administración directa no corresponde aplicarla." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cuántos monomios puede tener una fórmula polinómica?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hasta 8 monomios, según el D.S. 011-79-VC. Cada uno debe tener una incidencia de al menos 0.05 y los coeficientes se expresan al milésimo. Se permiten hasta 4 fórmulas por obra, u 8 en obras de diversa naturaleza." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Dónde se publican los índices unificados cada mes?",
+        "acceptedAnswer": { "@type": "Answer", "text": "El INEI los aprueba por resolución jefatural y se publican en el diario oficial El Peruano, normalmente a mediados del mes siguiente. El INEI también difunde un archivo acumulativo, pero suele ir varios meses atrasado." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="/images/logo.png" alt="IngePresupuestos" width="32" height="32">
+        <span>IngePresupuestos</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/#features">Características</a>
+        <a href="/apoyar">Apoyar</a>
+        <a href="https://docs.ingepresupuestos.com">Manual</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#descargar">Descargar</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ ARTÍCULO ============ -->
+  <article class="article">
+    <div class="container container-narrow">
+
+      <nav class="breadcrumb" aria-label="Migas de pan">
+        <a href="/">Inicio</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        Nueva versión 3.0.4: fórmula polinómica e índices INEI
+      </nav>
+
+      <header class="article-header">
+        <span class="tag">Novedades</span>
+        <h1>Nueva versión 3.0.4: fórmula polinómica e índices INEI</h1>
+        <div class="article-meta">
+          <strong>Ing. Marco Sumari</strong>
+          <span>·</span>
+          <time datetime="2026-08-30">30 de agosto de 2026</time>
+        </div>
+      </header>
+
+      <img class="article-cover" src="/images/blog/portada-3-0-4.jpg" alt="IngePresupuestos 3.0.4: fórmula polinómica al día con los índices unificados del INEI 2026" loading="eager">
+
+      <div class="article-body">
+
+
+        <p>El 20 de enero de 2026 el INEI cambió por completo el régimen de los
+        <strong>índices unificados de precios de la construcción</strong>. Si usted
+        elabora fórmulas polinómicas, esto le afecta: cambió la base, cambió el
+        número de áreas geográficas y treinta códigos pasaron a significar otra
+        cosa. IngePresupuestos 3.0.4 ya trabaja con el régimen nuevo, y lo cuento
+        aquí junto con lo que aprendimos al implementarlo.</p>
+
+        <h2>Qué cambió el INEI en 2026</h2>
+
+        <p>La <strong>R.J. 016-2026-INEI</strong> reemplazó la base que se usaba desde
+        hace más de treinta años. En concreto:</p>
+
+        <ul>
+          <li>La base pasó de <strong>Julio 1992 = 100</strong> a
+              <strong>Diciembre 2025 = 100</strong>.</li>
+          <li>Las áreas geográficas pasaron de <strong>6 a 13</strong>.</li>
+          <li>La relación creció de <strong>68 a 77 índices</strong>, numerados del
+              01 al 95 (la numeración tiene saltos, por eso son 77 y no 95).</li>
+          <li>Se publicó un <strong>Diccionario de Elementos de la Construcción</strong>
+              con 1930 elementos, que dice a qué índice corresponde cada insumo.</li>
+        </ul>
+
+        <p>Hay un detalle que conviene tener presente porque se presta a errores
+        caros: <strong>treinta códigos cambiaron de significado</strong>. El 21 era
+        «Cemento Portland Tipo I» y ahora es «Cemento Portland e hidráulico», que
+        absorbió al 22 y al 23, desaparecidos. Mezclar un índice de la base vieja
+        con uno de la nueva no da un error visible: da un reajuste equivocado.</p>
+
+        <p>Por eso en IngePresupuestos <strong>las dos bases conviven sin
+        mezclarse</strong>. Cada valor sabe a qué base pertenece, y el cálculo del
+        coeficiente K se niega a operar si la fecha de la oferta y la del reajuste
+        caen en bases distintas. Sus obras antiguas se siguen reajustando con la
+        base que les corresponde.</p>
+
+        <h2>Los índices vienen cargados, y se actualizan solos</h2>
+
+        <p>El programa trae el histórico completo: <strong>de 2013 a 2025 en la base
+        anterior</strong> —los doce meses de cada año, en las seis áreas— y
+        <strong>2026 hasta julio en la nueva</strong>, en las trece áreas. No hay que
+        importar nada para empezar a trabajar.</p>
+
+
+        <figure>
+          <img class="zoomable" src="/images/blog/indices-cargados-3-0-4.jpg"
+               alt="Índices unificados de precios de la construcción del INEI de 2013 a 2025 cargados en IngePresupuestos"
+               width="1600" height="1005" loading="lazy">
+          <figcaption>El histórico viene cargado: los doce meses de cada año desde
+          2013, en las seis áreas de la base anterior. No hay que importar nada
+          para empezar.</figcaption>
+        </figure>
+
+        <p>De ahí en adelante se mantiene al día por su cuenta, sin esperar a que
+        salga una versión nueva del programa. El botón «Sincronizar con INEI»
+        consulta las fuentes oficiales y le dice de dónde salió cada dato y qué
+        meses quedan sin cubrir, que es lo que uno necesita saber antes de firmar
+        una valorización.</p>
+
+        <h2>El catálogo ahora es editable</h2>
+
+        <p>Esta parte nació de un correo. Un ingeniero escribió diciendo que los
+        índices que traía el programa no le alcanzaban para su fórmula polinómica, y
+        pidió poder modificarlos, añadirlos y actualizarlos. Tenía razón, y ahora se
+        puede: <strong>crear índices nuevos, renombrar los existentes y dar de baja
+        los que no use</strong>.</p>
+
+        <p>El programa además revisa si algún insumo suyo quedó apuntando a un índice
+        que el cambio de base eliminó, y se lo dice con el nombre que ese código
+        tenía antes, para que sepa a cuál moverlo.</p>
+
+        <h2>Ver y editar qué compone cada monomio</h2>
+
+        <p>El mismo correo señalaba algo más: que el esquema para desarrollar la
+        fórmula polinómica era demasiado simple, que no se veían los componentes de
+        cada monomio ni se podía elegir cuáles iban en cada uno.</p>
+
+        <p>Ahora, al seleccionar un monomio, se muestra <strong>qué insumos lo
+        forman y con qué incidencia</strong>, y usted puede mover componentes de un
+        monomio a otro y ver al instante cómo cambian los coeficientes. También se
+        permiten <strong>hasta 4 fórmulas por obra</strong> —8 en obras de diversa
+        naturaleza— asignadas a los subpresupuestos que usted decida.</p>
+
+
+        <figure>
+          <img class="zoomable" src="/images/blog/formula-monomios-3-0-4.jpg"
+               alt="Composición de un monomio de la fórmula polinómica en IngePresupuestos, con la incidencia de cada insumo y el cálculo del reajuste K"
+               width="1600" height="1005" loading="lazy">
+          <figcaption>Al seleccionar el monomio A se ve de qué insumos sale su
+          monto y con qué incidencia. La columna «Monomio» permite mover un
+          índice a otro grupo y ver cómo cambian los coeficientes.</figcaption>
+        </figure>
+
+        <p>El programa valida lo que exige el <strong>D.S. 011-79-VC</strong>: máximo
+        8 monomios, incidencia mínima de 0.05 y coeficientes al milésimo. El decreto
+        viene incluido y se abre desde la misma pantalla, sin buscarlo en internet.</p>
+
+        <h2>Una regla que conviene recordar: administración directa</h2>
+
+        <p>La fórmula polinómica es de las <strong>obras por contrata</strong>. En una
+        obra por <strong>administración directa no se aplica</strong>, porque no hay
+        contratista a quien reajustarle un precio pactado. Antes esto estaba escrito
+        en la documentación pero el programa igual le ofrecía calcularla; ahora lo
+        respeta en los tres sitios donde aparecía, incluidas las valorizaciones.</p>
+
+        <h2>Cuatro errores que encontramos por el camino</h2>
+
+        <p>Al revisar cómo el programa leía los archivos del INEI aparecieron cosas
+        que llevaban tiempo ahí. Las cuento porque si usted usa otro programa, vale
+        la pena que compruebe lo mismo:</p>
+
+        <ul>
+          <li><strong>Se perdía septiembre de todos los años.</strong> El INEI rotula
+              sus hojas «Set-2013», con la abreviatura peruana, y el lector esperaba
+              «Sep». Trece septiembres, más de cinco mil valores.</li>
+          <li><strong>El INEI rectificó seis índices de enero a marzo de 2018</strong>
+              en una hoja aparte, y sus propias hojas mensuales nunca incorporaron la
+              corrección: siguen publicando los valores superados.</li>
+          <li><strong>El lector interpretaba mal el archivo</strong>: tomaba las áreas
+              por meses y sacaba 376 valores donde hay 36 444.</li>
+          <li><strong>El programa traía 2 212 valores que contradecían a los
+              oficiales</strong>, incluidos marcadores obvios como 100,00 y 1000,00 en
+              2024. Al actualizar se corrigen solos.</li>
+        </ul>
+
+        <h2>Cómo actualizar</h2>
+
+        <p>Si ya tiene IngePresupuestos instalado, el programa le avisará de la
+        actualización al abrirlo. Si no, puede descargarlo desde la página: es
+        <strong>software libre bajo licencia GPL-3.0</strong>, gratuito y completo,
+        sin funciones de pago ni registro.</p>
+
+        <p>Al abrir por primera vez la versión nueva, los índices se cargan solos y
+        sus valores corregidos quedan listos. Si usted había corregido algún índice a
+        mano, esa corrección se respeta.</p>
+
+      </div>
+
+        <div class="share-bar" data-url="https://ingepresupuestos.com/blog/novedades-3-0-4.html" data-title="Nueva versión 3.0.4: fórmula polinómica e índices INEI">
+          <span class="share-label">Comparte este post:</span>
+          <a class="share-btn share-wa" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp"
+             href="https://wa.me/?text=Nueva%20versi%C3%B3n%203.0.4%3A%20f%C3%B3rmula%20polin%C3%B3mica%20e%20%C3%ADndices%20INEI%20https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-0-4.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.519 5.27l-.999 3.648 3.97-1.617zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+          <a class="share-btn share-fb" target="_blank" rel="noopener" aria-label="Compartir en Facebook"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-0-4.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a class="share-btn share-x" target="_blank" rel="noopener" aria-label="Compartir en X (Twitter)"
+             href="https://twitter.com/intent/tweet?text=Nueva%20versi%C3%B3n%203.0.4%3A%20f%C3%B3rmula%20polin%C3%B3mica%20e%20%C3%ADndices%20INEI&url=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-0-4.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="share-btn share-in" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn"
+             href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-0-4.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <button class="share-btn share-copy" type="button" aria-label="Copiar enlace">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </button>
+        </div>
+
+      <!-- CTA: invita a descargar (no lo quites, es lo que convierte) -->
+      <div class="article-cta">
+        <h3>Haz tu presupuesto en minutos, no en días</h3>
+        <p>IngePresupuestos genera ACU, metrados, cronograma, especificaciones técnicas con IA y 13 reportes. Pruébalo gratis.</p>
+        <a href="/#descargar" class="btn btn-primary btn-lg">Descargar gratis</a>
+      </div>
+
+      <section class="article-faq">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Cuántos índices unificados hay en 2026?</summary>
+          <p>Son 77 índices, numerados del 01 al 95 porque la numeración tiene
+          saltos. Rigen para 13 áreas geográficas con base Diciembre 2025 = 100,
+          según la R.J. 016-2026-INEI.</p>
+        </details>
+        <details>
+          <summary>¿Se aplica fórmula polinómica en obras por administración directa?</summary>
+          <p>No. La fórmula polinómica es de las obras por contrata: reajusta el
+          precio pactado con un contratista. En administración directa no
+          corresponde aplicarla.</p>
+        </details>
+        <details>
+          <summary>¿Cuántos monomios puede tener una fórmula polinómica?</summary>
+          <p>Hasta 8 monomios, según el D.S. 011-79-VC. Cada uno debe tener una
+          incidencia de al menos 0.05 y los coeficientes se expresan al milésimo.
+          Se permiten hasta 4 fórmulas por obra, u 8 en obras de diversa
+          naturaleza.</p>
+        </details>
+        <details>
+          <summary>¿Dónde se publican los índices unificados cada mes?</summary>
+          <p>El INEI los aprueba por resolución jefatural y se publican en el
+          diario oficial El Peruano, normalmente a mediados del mes siguiente. El
+          INEI también difunde un archivo acumulativo, pero suele ir varios meses
+          atrasado.</p>
+        </details>
+      </section>
+
+      <!-- Autor -->
+      <div class="author-box">
+        <img src="/images/logo.png" alt="Ing. Marco Sumari">
+        <div>
+          <div class="author-name">Ing. Marco Sumari</div>
+          <div class="author-role">Ingeniero civil y creador de IngePresupuestos</div>
+        </div>
+      </div>
+
+      <p class="article-back"><a href="/blog/">← Volver al blog</a></p>
+
+    </div>
+  </article>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contacto" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="/images/logo.png" alt="Logo de IngePresupuestos" width="36" height="36">
+          <strong>IngePresupuestos</strong>
+        </div>
+        <p>Software de presupuestos de obra.</p>
+        <p class="footer-copy">© 2026 Ing. Marco Sumari</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="/#features">Características</a></li>
+          <li><a href="/apoyar">Apoyar</a></li>
+          <li><a href="/#descargar">Descargar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="https://docs.ingepresupuestos.com">Manual de usuario</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:ing.sumari@gmail.com">ing.sumari@gmail.com</a></li>
+          <li><a href="https://wa.me/51998839090" target="_blank" rel="noopener">WhatsApp +51 998 839 090</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/blog/blog.js?v=2"></script>
+</body>
+</html>
