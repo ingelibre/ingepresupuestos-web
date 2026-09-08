@@ -593,6 +593,17 @@ code {
   transition: all 0.2s; display: flex; flex-direction: column; gap: 12px;
 }
 .eco-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-img); }
+/* Captura discreta: una franja baja, bordes redondeados, sin sombra propia;
+   un poco apagada hasta que la tarjeta recibe el cursor. */
+.eco-shot {
+  display: block; margin: -30px -28px 6px; border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden; border-bottom: 1px solid var(--silver-300); background: var(--slate-900);
+}
+.eco-shot img {
+  display: block; width: 100%; height: 150px; object-fit: cover; object-position: top;
+  opacity: .88; transition: opacity .2s;
+}
+.eco-card:hover .eco-shot img { opacity: 1; }
 .eco-tag {
   align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--orange-dk); background: var(--orange-soft);
