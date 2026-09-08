@@ -582,6 +582,30 @@ code {
 }
 .section-head p { font-size: 16px; color: var(--slate-500); }
 
+/* ============ Ecosistema Inge ============ */
+.eco-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px; max-width: 920px; margin: 0 auto;
+}
+.eco-card {
+  background: var(--white); border: 1px solid var(--silver-300);
+  border-radius: var(--radius); padding: 30px 28px;
+  transition: all 0.2s; display: flex; flex-direction: column; gap: 12px;
+}
+.eco-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-img); }
+.eco-tag {
+  align-self: flex-start; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--orange-dk); background: var(--orange-soft);
+  padding: 4px 10px; border-radius: 999px;
+}
+.eco-card h3 { font-size: 22px; font-weight: 800; color: var(--slate-900); letter-spacing: -0.01em; }
+.eco-card p { font-size: 15px; color: var(--slate-500); line-height: 1.65; }
+.eco-links { display: flex; gap: 18px; flex-wrap: wrap; margin-top: auto; }
+.eco-links a { font-weight: 600; color: var(--orange-dk); text-decoration: none; }
+.eco-links a:hover { text-decoration: underline; }
+.eco-note { text-align: center; font-size: 14px; color: var(--slate-300); margin-top: 34px; }
+.eco-note a { color: var(--slate-500); }
+
 /* ============ Pricing ============ */
 .pricing-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
