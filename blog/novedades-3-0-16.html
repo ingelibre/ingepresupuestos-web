@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#273445">
+
+  <title>IngePresupuestos 3.0.16: ahora para toda Latinoamérica</title>
+  <meta name="description" content="Una versión pensada para quienes presupuestan fuera del Perú: perfil de país, monedas propias, AIU para Colombia, aviso de precios de referencia, decimales del ACU por tipo y el resumen de costos como imagen.">
+  <meta name="author" content="Ing. Marco Sumari">
+
+  <link rel="canonical" href="https://ingepresupuestos.com/blog/novedades-3-0-16.html">
+
+  <meta property="og:site_name" content="IngePresupuestos">
+  <meta property="og:title" content="IngePresupuestos 3.0.16: ahora para toda Latinoamérica">
+  <meta property="og:description" content="Una versión pensada para quienes presupuestan fuera del Perú: perfil de país, monedas propias, AIU para Colombia, aviso de precios de referencia, decimales del ACU por tipo y el resumen de costos como imagen.">
+  <meta property="og:image" content="https://ingepresupuestos.com/images/blog/portada-3-0-16.jpg">
+  <meta property="og:url" content="https://ingepresupuestos.com/blog/novedades-3-0-16.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_PE">
+  <meta property="article:published_time" content="2026-09-24">
+  <meta property="article:author" content="Ing. Marco Sumari">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IngePresupuestos 3.0.16: ahora para toda Latinoamérica">
+  <meta name="twitter:description" content="Una versión pensada para quienes presupuestan fuera del Perú: perfil de país, monedas propias, AIU para Colombia, aviso de precios de referencia, decimales del ACU por tipo y el resumen de costos como imagen.">
+  <meta name="twitter:image" content="https://ingepresupuestos.com/images/blog/portada-3-0-16.jpg">
+
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/blog/blog.css?v=2">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "IngePresupuestos 3.0.16: ahora para toda Latinoamérica",
+    "description": "Una versión pensada para quienes presupuestan fuera del Perú: perfil de país, monedas propias, AIU para Colombia, aviso de precios de referencia, decimales del ACU por tipo y el resumen de costos como imagen.",
+    "image": "https://ingepresupuestos.com/images/blog/portada-3-0-16.jpg",
+    "datePublished": "2026-09-24",
+    "dateModified": "2026-09-24",
+    "author": { "@type": "Person", "name": "Ing. Marco Sumari" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IngePresupuestos",
+      "logo": { "@type": "ImageObject", "url": "https://ingepresupuestos.com/images/logo.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ingepresupuestos.com/blog/novedades-3-0-16.html" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ingepresupuestos.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ingepresupuestos.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "IngePresupuestos 3.0.16: ahora para toda Latinoamérica", "item": "https://ingepresupuestos.com/blog/novedades-3-0-16.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cómo cambio el país o la moneda?",
+        "acceptedAnswer": { "@type": "Answer", "text": "En Configuración → País. El país fija la moneda, la identificación tributaria (RUC, NIT, RUT…) y el impuesto de los proyectos nuevos; los proyectos ya creados no cambian. La bienvenida del primer arranque lo pregunta una sola vez." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cambiar la moneda convierte los precios?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Solo cambia cómo se escriben los montos: símbolo y separadores. IngePresupuestos no tiene tipo de cambio, y los precios de la biblioteca de ejemplo son referenciales del Perú, en soles." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué hace «Solo la estructura» al traer partidas de la biblioteca?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Trae los rendimientos, las cuadrillas y las cantidades del análisis de costos, pero no los precios del Perú. Cada insumo toma el precio que ya tiene en tu proyecto, o 0 si es nuevo, y después cargas tus precios en la pestaña Insumos." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo agrego una moneda que no está en la lista?",
+        "acceptedAnswer": { "@type": "Answer", "text": "En Configuración → País → «Monedas…»: nombre, símbolo y formato de separadores. También sirve para corregir una de la lista, creando otra con el mismo nombre." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="/images/logo.png" alt="IngePresupuestos" width="32" height="32">
+        <span>IngePresupuestos</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/#features">Características</a>
+        <a href="/apoyar">Apoyar</a>
+        <a href="https://docs.ingepresupuestos.com">Manual</a>
+        <a href="/blog/">Blog</a>
+        <a href="/#descargar">Descargar</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ ARTÍCULO ============ -->
+  <article class="article">
+    <div class="container container-narrow">
+
+      <nav class="breadcrumb" aria-label="Migas de pan">
+        <a href="/">Inicio</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        IngePresupuestos 3.0.16: ahora para toda Latinoamérica
+      </nav>
+
+      <header class="article-header">
+        <span class="tag">Novedades</span>
+        <h1>IngePresupuestos 3.0.16: ahora para toda Latinoamérica</h1>
+        <div class="article-meta">
+          <strong>Ing. Marco Sumari</strong>
+          <span>·</span>
+          <time datetime="2026-09-24">24 de septiembre de 2026</time>
+        </div>
+      </header>
+
+      <img class="article-cover" src="/images/blog/portada-3-0-16.jpg" alt="IngePresupuestos 3.0.16: Configuración → País con Colombia, pesos colombianos, NIT, IVA del 19 % y el pie de presupuesto AIU" loading="eager">
+
+      <div class="article-body">
+
+        <p>En los últimos días llegaron muchos usuarios nuevos desde Colombia y
+        el resto de Latinoamérica, y nos contaron con claridad lo que deseaban
+        para trabajar desde su país: su moneda, su identificación tributaria y
+        su impuesto, su ubicación en el mapa y saber cuándo un precio de
+        referencia viene del Perú. Hasta ahora el programa estaba pensado para
+        presupuestar en el Perú; esta versión lo abre al resto de la región.
+        Aquí va lo que cambió.</p>
+
+        <h2>Tu país, desde el primer arranque</h2>
+
+        <p>Al abrir el programa por primera vez aparece una bienvenida que
+        pregunta <strong>desde qué país trabajas</strong>. Propone el del sistema
+        si es de Latinoamérica y si no, Perú. Con el país elegido, los proyectos
+        nuevos salen con su moneda, el nombre de su identificación tributaria
+        (RUC, NIT, RUT…) y su impuesto. Se cambia cuando quieras en
+        <strong>Configuración → País</strong>, y los proyectos ya creados no se
+        tocan.</p>
+
+        <figure>
+          <img class="zoomable" src="/images/blog/pais-3-0-16.jpg"
+               alt="Configuración → País en IngePresupuestos 3.0.16: país, moneda con el botón Monedas…, identificación tributaria e impuesto"
+               width="1600" height="512" loading="lazy">
+          <figcaption>Configuración → País. El país rellena la moneda, la
+          identificación tributaria y el impuesto; cualquiera se puede corregir
+          antes de guardar.</figcaption>
+        </figure>
+
+        <p>En <strong>Colombia</strong>, el pie de presupuesto de un proyecto
+        nuevo trae el <strong>AIU</strong>: Administración, Imprevistos y
+        Utilidad, con el IVA calculado sobre la utilidad. Para eso el pie tiene
+        un tipo de línea nuevo, «% Utilidad», que también puedes usar a mano en
+        proyectos que ya tenías.</p>
+
+        <p>La ubicación del proyecto dejó de sugerir distritos del Perú fuera del
+        Perú, el mapa abre en la capital de tu país y ahora tiene un buscador:
+        escribes el lugar y lo ubica.</p>
+
+        <h2>Tu moneda, en todas partes</h2>
+
+        <p>La moneda del proyecto no llegaba al Catálogo de Insumos, a la
+        Biblioteca, al Excel del análisis de costos ni al monto en letras del
+        presupuesto, que seguían diciendo soles. Ahora llega a todos. Y si tu
+        moneda no está en la lista, o la de la lista no se escribe como en tu
+        país, en <strong>Configuración → País → «Monedas…»</strong> puedes
+        agregar una con su nombre, su símbolo y sus separadores de miles y
+        decimales, incluidos el espacio y el apóstrofo.</p>
+
+        <p>Una aclaración importante: cambiar la moneda <strong>no convierte
+        los precios</strong>. IngePresupuestos no maneja tipo de cambio; solo
+        cambia cómo se escriben los montos.</p>
+
+        <h2>Precios de referencia, con aviso</h2>
+
+        <p>La biblioteca de análisis de costos que trae el programa tiene precios
+        de referencia del Perú, en soles. Si tu proyecto está en otra moneda y
+        traes partidas de la biblioteca (con «Sugerir partidas» o «Agregar
+        partida»), ahora el programa <strong>lo avisa</strong> y te deja elegir.
+        La opción <strong>«Solo la estructura»</strong> trae los rendimientos,
+        las cuadrillas y las cantidades, que sirven en cualquier país, y deja los
+        precios para que pongas los tuyos. Un insumo que tu proyecto ya usa
+        conserva su precio en los dos casos.</p>
+
+        <h2>Decimales del análisis de costos, por tipo</h2>
+
+        <p>La cantidad de decimales de las cantidades del ACU se mostraba pero no
+        se aplicaba al calcular: el precio unitario salía de la cantidad sin
+        redondear. Ahora la cantidad <strong>se redondea antes de multiplicarse
+        por el precio</strong>, y hay un ajuste para cada tipo de insumo: mano
+        de obra, materiales, equipos y subcontratos. El pie de presupuesto
+        también redondea cada línea, así que el total es la suma exacta de lo
+        que se imprime.</p>
+
+        <figure>
+          <img class="zoomable" src="/images/blog/decimales-3-0-16.jpg"
+               alt="Configuración → Decimales en IngePresupuestos 3.0.16 con decimales de montos, metrados y cantidades de mano de obra, materiales, equipos y subcontratos"
+               width="1600" height="688" loading="lazy">
+          <figcaption>Configuración → Decimales. Un ajuste por tipo de insumo;
+          el ejemplo de abajo muestra cómo quedará cada número.</figcaption>
+        </figure>
+
+        <h2>El resumen de costos, como imagen</h2>
+
+        <p>Clic derecho sobre el resumen de costos y <strong>«Copiar como
+        imagen»</strong>: la tarjeta de costos y la distribución del costo
+        directo quedan en el portapapeles, nítidas, listas para pegar en un
+        informe o en un chat. La fila COSTO DIRECTO va ahora en negrita, como
+        en los reportes.</p>
+
+        <figure>
+          <img class="zoomable" src="/images/blog/resumen-3-0-16.jpg"
+               alt="Pestaña Resumen de IngePresupuestos 3.0.16 con el menú Copiar como imagen sobre el resumen de costos y la distribución del costo directo"
+               width="810" height="655" loading="lazy">
+          <figcaption>Proyecto → Resumen, clic derecho. La imagen sale a tres
+          veces la resolución de la pantalla.</figcaption>
+        </figure>
+
+        <h2>Árbol del presupuesto y análisis de costos</h2>
+
+        <ul>
+          <li>Recalcular ya no hace perder la partida seleccionada, y las
+              flechas siguen navegando.</li>
+          <li>Al elegir un título, el panel del análisis de costos queda en
+              blanco en vez de seguir mostrando la partida anterior.</li>
+          <li>El filtro de nivel muestra solo títulos, para ver los montos
+              agrupados.</li>
+          <li>Nuevo botón <strong>«Ir a la selección»</strong> (◎) en la barra
+              del presupuesto: después de moverte por un presupuesto largo, te
+              devuelve a la partida seleccionada, y abre lo necesario si hay un
+              filtro de nivel.</li>
+          <li>Los insumos de un análisis de costos se <strong>suben y
+              bajan</strong> con clic derecho o con Alt+↑ y Alt+↓, como las
+              partidas en el árbol. El orden se guarda y sale igual en los
+              reportes.</li>
+          <li>Las columnas de cantidad, precio y parcial se ensanchan hasta el
+              número más largo, y la descripción ya no se aplasta en un panel
+              estrecho: aparece la barra horizontal.</li>
+          <li>Guardar es un botón verde con un disquete en el análisis de
+              costos, Metrados, Especificaciones y Memoria; al pasar el mouse
+              dice qué guarda.</li>
+          <li>En el Gantt, la ruta crítica ya no pinta de rojo el texto de las
+              partidas: se ve en las barras.</li>
+        </ul>
+
+        <h2>Errores corregidos desde la 3.0.12</h2>
+
+        <p>En la 3.0.16:</p>
+        <ul>
+          <li>La moneda del proyecto no llegaba a Insumos, Biblioteca, el Excel
+              del ACU ni el monto en letras.</li>
+          <li>Los decimales de cantidad del ACU no se aplicaban al calcular.</li>
+          <li>El pie de presupuesto no redondeaba cada línea.</li>
+          <li>Recalcular hacía perder la selección del árbol.</li>
+          <li>Los índices unificados del INEI que vienen con el programa habían
+              perdido julio de 2026. Ya están de vuelta.</li>
+        </ul>
+
+        <p>En la 3.0.14, del 16 de septiembre:</p>
+        <ul>
+          <li>En el pie de presupuesto, la ✕ de una línea borraba siempre la
+              última.</li>
+          <li>El Resumen limitado a un sub-presupuesto no se actualizaba al
+              cambiar de sub-presupuesto.</li>
+          <li>En la distribución del costo directo, con la tarjeta angosta, la
+              fila Total se montaba sobre el monto.</li>
+          <li>La pestaña Insumos mezclaba los subcontratos con los
+              materiales.</li>
+          <li>El PDF del Gantt traía la columna Predecesoras aunque estuviera
+              oculta en pantalla.</li>
+        </ul>
+
+        <h2>Cómo actualizar</h2>
+
+        <p>Si ya tienes IngePresupuestos instalado, el programa te avisará de la
+        actualización al abrirlo. Si no, descárgalo desde la página: es
+        <strong>software libre bajo licencia GPL-3.0</strong>, gratuito y
+        completo, sin funciones de pago ni registro.</p>
+
+        <p>Y si trabajas fuera del Perú y algo todavía asume que estás aquí,
+        escríbelo: esta versión salió justamente de esos reportes.</p>
+
+      </div>
+
+        <div class="share-bar" data-url="https://ingepresupuestos.com/blog/novedades-3-0-16.html" data-title="IngePresupuestos 3.0.16: ahora para toda Latinoamérica">
+          <span class="share-label">Comparte este post:</span>
+          <a class="share-btn share-wa" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp"
+             href="https://wa.me/?text=IngePresupuestos%203.0.16%3A%20ahora%20para%20toda%20Latinoam%C3%A9rica%20https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-0-16.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.519 5.27l-.999 3.648 3.97-1.617zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+          <a class="share-btn share-fb" target="_blank" rel="noopener" aria-label="Compartir en Facebook"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-0-16.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a class="share-btn share-x" target="_blank" rel="noopener" aria-label="Compartir en X (Twitter)"
+             href="https://twitter.com/intent/tweet?text=IngePresupuestos%203.0.16%3A%20ahora%20para%20toda%20Latinoam%C3%A9rica&url=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-0-16.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="share-btn share-in" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn"
+             href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-0-16.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <button class="share-btn share-copy" type="button" aria-label="Copiar enlace">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </button>
+        </div>
+
+      <!-- CTA: invita a descargar (no lo quites, es lo que convierte) -->
+      <div class="article-cta">
+        <h3>Haz tu presupuesto en minutos, no en días</h3>
+        <p>IngePresupuestos genera ACU, metrados, cronograma, especificaciones técnicas con IA y 13 reportes. Pruébalo gratis.</p>
+        <a href="/#descargar" class="btn btn-primary btn-lg">Descargar gratis</a>
+      </div>
+
+      <section class="article-faq">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Cómo cambio el país o la moneda?</summary>
+          <p>En Configuración → País. El país fija la moneda, la identificación tributaria (RUC, NIT, RUT…) y el impuesto de los proyectos nuevos; los proyectos ya creados no cambian. La bienvenida del primer arranque lo pregunta una sola vez.</p>
+        </details>
+        <details>
+          <summary>¿Cambiar la moneda convierte los precios?</summary>
+          <p>No. Solo cambia cómo se escriben los montos: símbolo y separadores. IngePresupuestos no tiene tipo de cambio, y los precios de la biblioteca de ejemplo son referenciales del Perú, en soles.</p>
+        </details>
+        <details>
+          <summary>¿Qué hace «Solo la estructura» al traer partidas de la biblioteca?</summary>
+          <p>Trae los rendimientos, las cuadrillas y las cantidades del análisis de costos, pero no los precios del Perú. Cada insumo toma el precio que ya tiene en tu proyecto, o 0 si es nuevo, y después cargas tus precios en la pestaña Insumos.</p>
+        </details>
+        <details>
+          <summary>¿Cómo agrego una moneda que no está en la lista?</summary>
+          <p>En Configuración → País → «Monedas…»: nombre, símbolo y formato de separadores. También sirve para corregir una de la lista, creando otra con el mismo nombre.</p>
+        </details>
+      </section>
+
+      <!-- Autor -->
+      <div class="author-box">
+        <img src="/images/logo.png" alt="Ing. Marco Sumari">
+        <div>
+          <div class="author-name">Ing. Marco Sumari</div>
+          <div class="author-role">Ingeniero civil y creador de IngePresupuestos</div>
+        </div>
+      </div>
+
+      <p class="article-back"><a href="/blog/">← Volver al blog</a></p>
+
+    </div>
+  </article>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contacto" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="/images/logo.png" alt="Logo de IngePresupuestos" width="36" height="36">
+          <strong>IngePresupuestos</strong>
+        </div>
+        <p>Software de presupuestos de obra.</p>
+        <p class="footer-copy">© 2026 Ing. Marco Sumari</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="/#features">Características</a></li>
+          <li><a href="/apoyar">Apoyar</a></li>
+          <li><a href="/#descargar">Descargar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="https://docs.ingepresupuestos.com">Manual de usuario</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:ing.sumari@gmail.com">ing.sumari@gmail.com</a></li>
+          <li><a href="https://wa.me/51998839090" target="_blank" rel="noopener">WhatsApp +51 998 839 090</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/blog/blog.js?v=2"></script>
+</body>
+</html>
