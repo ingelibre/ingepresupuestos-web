@@ -28,3 +28,6 @@ captura/
 # temporales de build y de wrangler
 .wrangler/
 .cover-build/
+
+# Notas privadas de trabajo: solo en la máquina del mantenedor
+CLAUDE.md
