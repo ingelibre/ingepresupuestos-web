@@ -7,15 +7,15 @@
 
   <title>IngePresupuestos · Software libre de presupuestos de obra</title>
 
-  <meta name="description" content="Software libre y gratuito para presupuestos de obra: ACU, metrados, Gantt y 13 reportes con IA. Compatible con S10, Delphin y PowerCost. Windows y Linux.">
-  <meta name="keywords" content="software libre presupuestos, presupuestos de obra gratis, alternativa libre a S10, presupuesto obra, software presupuestos de obra, código abierto, GPL, especificaciones técnicas con IA, ACU, cronograma Gantt, Delphin Express, PowerCost, S10, INEI, CAPECO, ingeniería civil Perú, software construcción">
+  <meta name="description" content="Software libre y gratuito para presupuestos de obra: ACU, metrados, Gantt y 13 reportes con IA. Abre archivos .prs, .sqlite, copias .bak y Excel. Windows y Linux.">
+  <meta name="keywords" content="software libre presupuestos, presupuestos de obra gratis, presupuesto obra, software presupuestos de obra, código abierto, GPL, especificaciones técnicas con IA, ACU, análisis de costos unitarios, metrados, cronograma Gantt, índices unificados INEI, fórmula polinómica, ingeniería civil Perú, software construcción">
   <meta name="author" content="Ing. Marco Sumari">
 
   <link rel="canonical" href="https://ingepresupuestos.com/">
 
   <meta property="og:site_name" content="IngePresupuestos">
   <meta property="og:title" content="IngePresupuestos · Software libre de presupuestos de obra">
-  <meta property="og:description" content="Software libre y gratuito. Genera ACU, metrados, Gantt y 13 reportes con IA. Compatible con S10, Delphin y PowerCost. Windows y Linux.">
+  <meta property="og:description" content="Software libre y gratuito. Genera ACU, metrados, Gantt y 13 reportes con IA. Abre archivos .prs, .sqlite, copias .bak y Excel. Windows y Linux.">
   <meta property="og:image" content="https://ingepresupuestos.com/images/og-banner.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -25,7 +25,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="IngePresupuestos · Software libre de presupuestos de obra">
-  <meta name="twitter:description" content="Software libre y gratuito. Genera ACU, metrados, Gantt y 13 reportes con IA. Compatible con S10, Delphin y PowerCost. Windows y Linux.">
+  <meta name="twitter:description" content="Software libre y gratuito. Genera ACU, metrados, Gantt y 13 reportes con IA. Abre archivos .prs, .sqlite, copias .bak y Excel. Windows y Linux.">
   <meta name="twitter:image" content="https://ingepresupuestos.com/images/og-banner.jpg">
 
   <link rel="icon" href="images/favicon.ico" sizes="any">
@@ -46,7 +46,7 @@
     "name": "IngePresupuestos",
     "operatingSystem": "Windows, Linux",
     "applicationCategory": "BusinessApplication",
-    "description": "Software libre de presupuestos de obra con IA: genera especificaciones técnicas, ACU, metrados, cronograma Gantt y 13 reportes. Compatible con S10, Delphin y PowerCost. Multiplataforma y offline. Gratis y con el código fuente abierto bajo GPL-3.0.",
+    "description": "Software libre de presupuestos de obra con IA: genera especificaciones técnicas, ACU, metrados, cronograma Gantt y 13 reportes. Abre archivos .prs, .sqlite, copias .bak y Excel. Multiplataforma y offline. Gratis y con el código fuente abierto bajo GPL-3.0.",
     "url": "https://ingepresupuestos.com/",
     "image": "https://ingepresupuestos.com/images/logo.png",
     "author": {
@@ -103,10 +103,10 @@
       },
       {
         "@type": "Question",
-        "name": "¿Puedo importar mis archivos de S10?",
+        "name": "¿Puedo abrir los presupuestos que ya tengo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sí. Con IngeConverter (incluido gratis) conviertes bases .S2K, .bkf y .bak de S10. También soportamos Excel exportado."
+          "text": "Sí. IngePresupuestos abre archivos .prs y bases .sqlite directamente, y con IngeConverter (incluido gratis) las copias de seguridad .bak, .bkf y .S2K. También importa Excel, PDF y proyectos XML de MS Project."
         }
       },
       {
@@ -179,7 +179,7 @@
   <section class="hero">
     <div class="container hero-center">
       <h1>Software libre de presupuestos<br>de obra</h1>
-      <p class="hero-sub">Multiplataforma. Offline. Formato abierto.<br>Compatible con S10, Delphin y PowerCost.</p>
+      <p class="hero-sub">Multiplataforma. Offline. Formato abierto.<br>Abre tus presupuestos en .prs, .sqlite, .bak y Excel.</p>
       <div class="hero-ctas">
         <a href="#descargar" class="btn btn-primary btn-lg">Descargar IngePresupuestos</a>
         <span class="hero-version">Última versión: <span id="latest-version">cargando…</span></span>
@@ -401,8 +401,8 @@
             </figure>
             <figure class="mini-slide">
               <img src="images/screenshots/cronograma-gantt-2.jpeg"
-                   alt="Vista de impresión del Gantt estilo MS Project" width="1600" height="968" loading="lazy">
-              <figcaption>Impresión estilo MS Project (A4 a A0)</figcaption>
+                   alt="Vista de impresión del Gantt con ruta crítica" width="1600" height="968" loading="lazy">
+              <figcaption>Gantt con ruta crítica, impreso de A4 a A0</figcaption>
             </figure>
           </div>
           <button class="mini-prev" type="button" aria-label="Anterior">‹</button>
@@ -444,18 +444,18 @@
       <div class="container feat-row">
         <div class="feat-text">
           <img src="images/ingeconverter-icon.png" alt="IngeConverter" class="converter-icon" width="256" height="256">
-          <h2>Importa desde<br>bases nativas.</h2>
-          <p>Lee directamente los archivos originales de tu software actual — no necesitas exportar a Excel primero.</p>
+          <h2>Abre los presupuestos<br>que ya tienes.</h2>
+          <p>Lee directamente las bases de datos que ya tienes — no necesitas exportar a Excel primero.</p>
           <ul class="feat-list">
-            <li><strong>S10</strong> — .S2K / .bkf / .bak vía IngeConverter</li>
-            <li><strong>Delphin Express</strong> — .sqlite nativo</li>
-            <li><strong>PowerCost</strong> — .prs (Access)</li>
+            <li><strong>.prs</strong> — bases de Access</li>
+            <li><strong>.sqlite / .db</strong> — bases SQLite</li>
+            <li><strong>.bak / .bkf / .S2K</strong> — copias de seguridad de SQL Server, vía IngeConverter</li>
             <li><strong>Excel</strong> — .xlsx de cualquier software</li>
             <li><strong>BIM</strong> — .ifc de Revit / ArchiCAD / Tekla</li>
           </ul>
         </div>
         <div class="feat-img">
-          <img src="images/screenshots/importar-powercost.jpeg"
+          <img src="images/screenshots/importar-bases.jpeg"
                alt="Importadores nativos" width="1600" height="964" loading="lazy">
         </div>
       </div>
@@ -559,7 +559,7 @@
         </div>
         <div class="dl-divider"></div>
         <div class="dl-group">
-          <span class="dl-group-label">IngeConverter <span class="dl-group-tag">S10</span></span>
+          <span class="dl-group-label">IngeConverter <span class="dl-group-tag">.bak</span></span>
           <div class="dl-group-cards">
             <div class="dl-item">
               <a href="#" class="dl-card dl-card-compact" id="dl-ic-win">
@@ -577,65 +577,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- ============ COMPARATIVA ============ -->
-  <section id="comparativa" class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Una alternativa moderna</h2>
-        <p>Todo lo que necesitas para tus presupuestos de obra — más Linux, IA, Control de Obra y código abierto.</p>
-      </div>
-      <div class="compare-wrap">
-        <table class="compare-table">
-          <thead>
-            <tr>
-              <th scope="col">Característica</th>
-              <th scope="col" class="compare-hero">IngePresupuestos</th>
-              <th scope="col">Software propietario<br><span style="font-weight:400;font-size:.8em;color:#8a97a3;">S10 · Delphin · PowerCost</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Windows</th>
-              <td class="compare-hero"><span class="ck">✓</span></td>
-              <td><span class="ck">✓</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Linux</th>
-              <td class="compare-hero"><span class="ck">✓</span></td>
-              <td><span class="no">—</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Formato abierto (SQLite)</th>
-              <td class="compare-hero"><span class="ck">✓</span></td>
-              <td><span class="no">—</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Asistente IA integrado</th>
-              <td class="compare-hero"><span class="ck">✓</span></td>
-              <td><span class="no">—</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Control de Obra</th>
-              <td class="compare-hero"><span class="ck">✓</span> Valorizaciones · almacén · curva S real</td>
-              <td>Parcial</td>
-            </tr>
-            <tr>
-              <th scope="row">Importa proyectos de los demás</th>
-              <td class="compare-hero"><span class="ck">✓</span> S10 · Delphin · PowerCost</td>
-              <td><span class="no">—</span></td>
-            </tr>
-            <tr>
-              <th scope="row">Gratis para empezar (PDF sin límite)</th>
-              <td class="compare-hero"><span class="ck">✓</span></td>
-              <td><span class="no">—</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p class="compare-note">Comparación referencial según información pública. S10, Delphin Express y PowerCost son marcas de sus respectivos propietarios.</p>
     </div>
   </section>
 
@@ -663,8 +604,8 @@
           <p>Sí. El archivo <code>.db</code> es SQLite puro — ábrelo con DB Browser, DBeaver, Python o cualquier herramienta. No es formato propietario.</p>
         </details>
         <details class="faq-item">
-          <summary>¿Puedo importar mis archivos de S10?</summary>
-          <p>Sí. Con <strong>IngeConverter</strong> (incluido gratis) conviertes bases <code>.S2K</code>, <code>.bkf</code> y <code>.bak</code> de S10. También soportamos Excel exportado.</p>
+          <summary>¿Puedo abrir los presupuestos que ya tengo?</summary>
+          <p>Sí. IngePresupuestos abre archivos <code>.prs</code> y bases <code>.sqlite</code> directamente, y con <strong>IngeConverter</strong> (incluido gratis) las copias de seguridad <code>.bak</code>, <code>.bkf</code> y <code>.S2K</code>. También importa Excel, PDF y proyectos XML de MS Project.</p>
         </details>
         <details class="faq-item">
           <summary>¿Cómo se instala en Windows?</summary>
