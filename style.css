@@ -1713,3 +1713,7 @@ button.aporte-link {
 .steps .step-n { box-shadow: 0 0 0 7px var(--white), 0 8px 22px rgba(243,115,41,0.35); }
 #complementos .feat-img { max-width: 900px; }
 .dl-item { align-self: flex-start; } .dl-group-cards:has(.dl-item) { align-items: flex-start; }
+.feat-text p.pronto, .section-head p.pronto { display: inline-block; font-size: 12.5px; font-weight: 700; color: #9A4A0F; background: #FDE3CC; padding: 3px 11px; border-radius: 999px; margin: 0 0 12px; }
+.feat-bim .feat-text p.pronto { color: #9A4A0F; }
+.dl-pronto { opacity: .6; cursor: default; }
+.dl-pronto:hover { transform: none; box-shadow: none; }
