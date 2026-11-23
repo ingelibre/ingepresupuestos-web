@@ -1712,3 +1712,4 @@ button.aporte-link {
 .steps h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: var(--head); text-align: left; margin-bottom: 36px; }
 .steps .step-n { box-shadow: 0 0 0 7px var(--white), 0 8px 22px rgba(243,115,41,0.35); }
 #complementos .feat-img { max-width: 900px; }
+.dl-item { align-self: flex-start; } .dl-group-cards:has(.dl-item) { align-items: flex-start; }
