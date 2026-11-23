@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css?v=320">
+  <link rel="stylesheet" href="style.css?v=321">
 
   <script type="application/ld+json">
   {
@@ -171,6 +171,7 @@
       <nav class="nav-links">
         <a href="#features">Características</a>
         <a href="#descargar">Descargar</a>
+        <a href="#complementos">Complementos</a>
         <a href="https://docs.ingepresupuestos.com">Manual</a>
         <a href="/blog/">Blog</a>
         <a href="https://github.com/ingelibre/ingepresupuestos" target="_blank" rel="noopener">GitHub</a>
@@ -272,15 +273,21 @@
 
   <!-- ============ FEATURES ============ -->
   <div id="features">
+    <div class="container features-head"><h2>Todo lo que necesitas para presupuestar y controlar la obra</h2></div>
 
-    <!-- ── 0. Elabora tu presupuesto ── -->
-    <section class="feat elabora reveal">
-      <div class="container">
-        <div class="elabora-head">
-          <h2>Todo el expediente<br>en una sola ventana.</h2>
-          <p>Todo el expediente técnico en una sola app: análisis de costos unitarios, insumos, metrados, especificaciones, memoria descriptiva, resumen ejecutivo y plantillas reutilizables. Sin saltar entre programas.</p>
+    <section class="feat  reveal">
+      <div class="container feat-row">
+        <div class="feat-text">
+          <h2>Todo el expediente en una sola ventana</h2>
+          <p>Análisis de costos unitarios, insumos, metrados, especificaciones, memoria descriptiva y resumen. Sin saltar entre programas.</p>
+          <ul class="feat-list">
+            <li><strong>Sub-partidas</strong> — un concreto se analiza una vez y se usa en otros análisis</li>
+            <li><strong>Metrados por elemento</strong> — largo, ancho, alto y conteo; acero por diámetro</li>
+            <li><strong>Plantillas</strong> — reutiliza la estructura y sus análisis en la siguiente obra</li>
+            <li><strong>Deshacer y rehacer</strong> con Ctrl+Z y Ctrl+Y</li>
+          </ul>
         </div>
-        <div class="elabora-carousel mini-carousel">
+        <div class="mini-carousel">
           <div class="mini-track">
             <figure class="mini-slide">
               <img src="images/screenshots/elabora-acu.jpeg"
@@ -329,18 +336,52 @@
       </div>
     </section>
 
-    <!-- ── Control de Obra ── -->
-    <section class="feat feat-alt reveal">
+    <section class="feat feat-bim reveal" id="bim">
       <div class="container feat-row feat-reverse">
         <div class="feat-text">
-          <h2>Controla tu obra,<br>desde el presupuesto hasta la ejecución.</h2>
-          <p>IngePresupuestos ya no solo <em>elabora</em> el presupuesto: ahora te acompaña durante la <strong>ejecución de la obra</strong>. Un módulo completo con cinco pestañas que siguen el día a día del residente.</p>
+          <h2>Del modelo BIM al metrado</h2>
+          <p>Abre un IFC, mira los elementos antes de importar y vincúlalos con sus partidas. Cuando el modelo cambia, ves qué se movería <strong>antes de aplicarlo</strong>.</p>
           <ul class="feat-list">
-            <li><strong>Requerimientos</strong> — pedidos por categoría con los insumos del presupuesto; la IA redacta los términos de referencia</li>
-            <li><strong>Almacén</strong> — kárdex de materiales: pedido, ingresado, consumido, stock y por llegar</li>
-            <li><strong>Cuaderno de obra</strong> — asientos diarios: metrado ejecutado, mano de obra e insumos</li>
-            <li><strong>Valorizaciones</strong> — avance físico: Base, Anterior, Actual, Acumulado y Saldo</li>
-            <li><strong>Curva S real</strong> — programado vs. reprogramado vs. real</li>
+            <li><strong>No inventa metrados</strong> — respeta las unidades del archivo y avisa lo que no trae cantidad</li>
+            <li><strong>De ida y vuelta</strong> — elige una partida y encuentra sus elementos, o al revés</li>
+            <li><strong>Directo desde <a href="https://ingetrazo.com" target="_blank" rel="noopener">IngeTrazo</a></strong> — lee el modelo abierto, sin exportar nada (IngeTrazo 0.6.3.3 o posterior)</li>
+            <li><strong>Lo escrito a mano no se toca</strong></li>
+          </ul>
+          <p class="feat-muted-light">La vista 3D está en beta y necesita aceleración gráfica.</p>
+        </div>
+        <figure class="feat-img"><img class="zoomable" src="images/screenshots/bim-modelo.webp" alt="Ventana Modelo BIM con 15 elementos de un IFC por clase, las partidas del presupuesto y los vínculos de la zapata Z-1" width="1240" height="760" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="feat feat-import reveal">
+      <div class="container feat-row">
+        <div class="feat-text">
+          <img src="images/ingeconverter-icon.png" alt="" class="converter-icon" width="256" height="256">
+          <h2>Abre los presupuestos que ya tienes</h2>
+          <p>Lee directamente las bases de datos que ya tienes, sin pasar por Excel.</p>
+          <ul class="feat-list">
+            <li><strong>.prs</strong> — bases de Access</li>
+            <li><strong>.sqlite / .db</strong> — bases SQLite</li>
+            <li><strong>.bak / .bkf / .S2K</strong> — copias de SQL Server, vía IngeConverter</li>
+            <li><strong>BC3 y Excel</strong> — .bc3 y .xlsx, incluidos los análisis de S10</li>
+            <li><strong>BIM</strong> — .ifc de Revit, ArchiCAD, Tekla o IngeTrazo</li>
+          </ul>
+        </div>
+        <figure class="feat-img"><img class="zoomable" src="images/screenshots/importar-bases.jpeg" alt="Importadores nativos" width="1600" height="964" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="feat  reveal">
+      <div class="container feat-row feat-reverse">
+        <div class="feat-text">
+          <h2>Controla la obra hasta el final</h2>
+          <p>El presupuesto no se queda en el expediente: cinco pestañas siguen el día a día de la ejecución.</p>
+          <ul class="feat-list">
+            <li><strong>Requerimientos</strong> — pedidos con el saldo del presupuesto</li>
+            <li><strong>Almacén</strong> — kárdex de materiales</li>
+            <li><strong>Cuaderno de obra</strong> — asientos diarios</li>
+            <li><strong>Valorizaciones</strong> — anterior, actual, acumulado y saldo</li>
+            <li><strong>Curva S real</strong> — programado, reprogramado y real</li>
           </ul>
           <p class="feat-muted">Cada pestaña genera su reporte en PDF, Excel, Word y ODT.</p>
         </div>
@@ -378,40 +419,17 @@
       </div>
     </section>
 
-    <!-- ── 1. Multiplataforma ── -->
-    <section class="feat reveal">
+    <section class="feat  reveal">
       <div class="container feat-row">
         <div class="feat-text">
-          <h2>Multiplataforma.<br>Windows y Linux.</h2>
-          <p>Una sola aplicación, idéntica en ambos sistemas. Los mismos proyectos, las mismas funciones, sin emuladores ni máquinas virtuales.</p>
-          <p>Instalador .exe o Microsoft Store para Windows; AppImage o Flatpak para Linux.</p>
-        </div>
-        <div class="mini-carousel">
-          <div class="mini-track">
-            <figure class="mini-slide">
-              <img src="images/screenshots/dashboard-windows.jpeg"
-                   alt="Dashboard en Windows" width="1600" height="1000" loading="lazy">
-              <figcaption>Windows</figcaption>
-            </figure>
-            <figure class="mini-slide">
-              <img src="images/screenshots/dashboard-linux.jpeg"
-                   alt="Dashboard en Linux" width="1600" height="1000" loading="lazy">
-              <figcaption>Linux</figcaption>
-            </figure>
-          </div>
-          <button class="mini-prev" type="button" aria-label="Anterior">‹</button>
-          <button class="mini-next" type="button" aria-label="Siguiente">›</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 2. Centro de Reportes ── -->
-    <section class="feat feat-alt reveal">
-      <div class="container feat-row feat-reverse">
-        <div class="feat-text">
-          <h2>Centro de Reportes<br>profesionales.</h2>
-          <p>13 tipos de reporte: presupuestos, análisis de costos unitarios, metrados, insumos, especificaciones técnicas, memoria descriptiva, desagregado del pie de presupuesto, cronogramas de obra y más. Con preview en vivo.</p>
-          <p class="feat-muted">Exporta a Excel, Word y MS Project, o en tus formatos libres ODS y ODT. Pie tripartito con tu marca, logo de empresa y numeración automática.</p>
+          <h2>Reportes listos para entregar</h2>
+          <p>13 tipos de reporte con vista previa, del presupuesto a los cronogramas de obra.</p>
+          <ul class="feat-list">
+            <li><strong>PDF, Excel y Word</strong> — también ODS y ODT</li>
+            <li><strong>Temas por proyecto</strong> — con tu logo, tu marca y numeración automática</li>
+            <li><strong>Columnas a tu medida</strong> — mano de obra, materiales y equipos</li>
+            <li><strong>Los números como en tu país</strong> — con los separadores de tu moneda</li>
+          </ul>
         </div>
         <div class="mini-carousel">
           <div class="mini-track">
@@ -432,15 +450,14 @@
       </div>
     </section>
 
-    <!-- ── 3. Tuxia IA ── -->
     <section class="feat feat-tuxia reveal">
       <div class="container feat-row">
         <div class="feat-text">
           <img src="images/tuxia-icon.png" alt="Tuxia" class="tuxia-icon" width="620" height="783">
-          <h2>Inteligencia Artificial<br>integrada en el núcleo.</h2>
-          <p>La IA no es un añadido: está tejida en todo el flujo. Y ahora hace mucho más: te <strong>sugiere la estructura de partidas</strong> de un presupuesto nuevo desde su nombre y unas notas, redacta <strong>especificaciones técnicas</strong> y <strong>términos de referencia</strong>, genera la <strong>memoria descriptiva</strong>, detecta incoherencias y encuentra insumos duplicados.</p>
-          <p>Tuxia, tu asistente, entiende el contexto de cada partida — la estructura la arma la IA, los <strong>costos los pone tu propia biblioteca</strong>.</p>
-          <p class="feat-muted-light">Compatible con Anthropic, OpenAI, Gemini, Groq, OpenRouter y Ollama local. Usa tu propia API key.</p>
+          <h2>IA integrada en el núcleo</h2>
+          <p>Tuxia <strong>sugiere la estructura de partidas</strong>, redacta <strong>especificaciones</strong> y <strong>términos de referencia</strong>, genera la <strong>memoria descriptiva</strong> y detecta incoherencias.</p>
+          <p>La estructura la arma la IA; <strong>los costos los pone tu biblioteca</strong>.</p>
+          <p class="feat-muted-light">Compatible con Anthropic, OpenAI, Gemini, Groq, OpenRouter y Ollama local. Usa tu propia clave.</p>
         </div>
         <div class="mini-carousel">
           <div class="mini-track">
@@ -461,170 +478,183 @@
       </div>
     </section>
 
-    <!-- ── 4. Gantt ── -->
-    <section class="feat feat-alt reveal">
-      <div class="container feat-row feat-reverse">
+    <section class="feat  reveal" id="ia">
+      <div class="container feat-row feat-solo">
         <div class="feat-text">
-          <h2>Diagrama de Gantt<br>y cronogramas.</h2>
-          <p>Programación CPM con ruta crítica, dependencias gráficas FS/SS/FF/SF, holguras, hitos y drag &amp; drop visual.</p>
-          <p>Cronograma valorizado, adquisición de insumos por período, curva S.</p>
-          <p class="feat-muted">Exporta a XML estándar (MSPDI), un formato abierto que abre en MS Project pero también en programas gratuitos como <strong>ProjectLibre</strong>, <strong>OpenProj</strong> y <strong>GanttProject</strong> — sin licencias.</p>
-        </div>
-        <div class="mini-carousel">
-          <div class="mini-track">
-            <figure class="mini-slide">
-              <img src="images/screenshots/cronograma-gantt.jpeg"
-                   alt="Diagrama de Gantt interactivo con ruta crítica" width="1600" height="967" loading="lazy">
-              <figcaption>Gantt interactivo con ruta crítica</figcaption>
-            </figure>
-            <figure class="mini-slide">
-              <img src="images/screenshots/cronograma-gantt-2.jpeg"
-                   alt="Vista de impresión del Gantt con ruta crítica" width="1600" height="968" loading="lazy">
-              <figcaption>Gantt con ruta crítica, impreso de A4 a A0</figcaption>
-            </figure>
-          </div>
-          <button class="mini-prev" type="button" aria-label="Anterior">‹</button>
-          <button class="mini-next" type="button" aria-label="Siguiente">›</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Fórmula polinómica e índices INEI ── -->
-    <section class="feat reveal">
-      <div class="container feat-row">
-        <div class="feat-text">
-          <h2>Fórmula polinómica<br>e índices unificados.</h2>
-          <p>Reajusta tus valorizaciones con los índices unificados del INEI. Hasta 4 fórmulas por obra —8 en obras de diversa naturaleza— con las validaciones del <strong>D.S. 011-79-VC</strong>: máximo 8 monomios, incidencia mínima de 0.05 y coeficientes al milésimo.</p>
-          <p>Ves qué insumos forman cada monomio y con cuánta incidencia, y los mueves de uno a otro para ver cómo cambian los coeficientes.</p>
-          <p class="feat-muted">Los índices vienen cargados desde 2013 y se mantienen al día solos, ya con la nueva base <strong>Diciembre 2025 = 100</strong>: 13 áreas geográficas y 77 índices. El catálogo es editable y trae el diccionario oficial de elementos de la construcción.</p>
-        </div>
-        <div class="mini-carousel">
-          <div class="mini-track">
-            <figure class="mini-slide">
-              <img src="images/screenshots/formula-polinomica.jpeg"
-                   alt="Fórmula polinómica con sus monomios, la composición de cada uno y el cálculo del reajuste K" width="1600" height="1005" loading="lazy">
-              <figcaption>Cada monomio, con sus insumos e incidencia</figcaption>
-            </figure>
-            <figure class="mini-slide">
-              <img src="images/screenshots/indices-inei.jpeg"
-                   alt="Índices unificados de precios de la construcción del INEI cargados desde 2013" width="1600" height="1005" loading="lazy">
-              <figcaption>Índices del INEI cargados y editables</figcaption>
-            </figure>
-          </div>
-          <button class="mini-prev" type="button" aria-label="Anterior">‹</button>
-          <button class="mini-next" type="button" aria-label="Siguiente">›</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── 5. Importadores ── -->
-    <section class="feat feat-import reveal">
-      <div class="container feat-row">
-        <div class="feat-text">
-          <img src="images/ingeconverter-icon.png" alt="IngeConverter" class="converter-icon" width="256" height="256">
-          <h2>Abre los presupuestos<br>que ya tienes.</h2>
-          <p>Lee directamente las bases de datos que ya tienes — no necesitas exportar a Excel primero.</p>
+          <h2>Maneja tus presupuestos desde tu asistente de IA</h2>
+          <p>Conecta Claude, Codex, Gemini, Cursor o VS Code por MCP y pídele con palabras: consulta, compara y edita <em>en la app abierta</em>.</p>
           <ul class="feat-list">
-            <li><strong>.prs</strong> — bases de Access</li>
-            <li><strong>.sqlite / .db</strong> — bases SQLite</li>
-            <li><strong>.bak / .bkf / .S2K</strong> — copias de seguridad de SQL Server, vía IngeConverter</li>
-            <li><strong>Excel</strong> — .xlsx de cualquier software</li>
-            <li><strong>BIM</strong> — .ifc de Revit / ArchiCAD / Tekla</li>
+            <li><strong>Apagada por defecto</strong> — la enciendes tú en Configuración</li>
+            <li><strong>Cada cambio se deshace</strong> — y si algo falla, no queda nada a medias</li>
+            <li><strong>Los números los calcula el programa</strong> — no la IA</li>
+            <li><strong>Solo en tu computadora</strong> — lo que el asistente lea va al proveedor de IA que uses</li>
           </ul>
         </div>
-        <div class="feat-img">
-          <img src="images/screenshots/importar-bases.jpeg"
-               alt="Importadores nativos" width="1600" height="964" loading="lazy">
+      </div>
+      <div class="container">
+        <h3 class="feat-ia-title">Así se conecta</h3>
+        <div class="feat-ia-grid">
+          <div class="feat-ia-cfg"><h3>Claude Code, en Windows</h3>
+<div class="dl-code">
+<code>claude mcp add ingepresupuestos -- &quot;C:\Program Files\IngePresupuestos\ingepresupuestos-mcp.exe&quot;</code>
+<button class="dl-code-copy dl-winget-copy" type="button" data-copy="claude mcp add ingepresupuestos -- &quot;C:\Program Files\IngePresupuestos\ingepresupuestos-mcp.exe&quot;">Copiar</button>
+</div>
+            <p>El programa te muestra la línea exacta de tu sistema, lista para copiar.</p></div>
+          <div class="feat-ia-cfg"><h3>Cualquier cliente MCP</h3>
+<div class="dl-code">
+<code>{
+  &quot;mcpServers&quot;: {
+    &quot;ingepresupuestos&quot;: {
+      &quot;command&quot;: &quot;C:\\Program Files\\IngePresupuestos\\ingepresupuestos-mcp.exe&quot;,
+      &quot;args&quot;: []
+    }
+  }
+}</code>
+<button class="dl-code-copy dl-winget-copy" type="button" data-copy="{
+  &quot;mcpServers&quot;: {
+    &quot;ingepresupuestos&quot;: {
+      &quot;command&quot;: &quot;C:\\Program Files\\IngePresupuestos\\ingepresupuestos-mcp.exe&quot;,
+      &quot;args&quot;: []
+    }
+  }
+}">Copiar</button>
+</div>
+            <p>El bloque del archivo de configuración de tu cliente.</p></div>
+          <div class="feat-ia-cfg"><h3>En Linux, con Flatpak</h3>
+<div class="dl-code">
+<code>claude mcp add ingepresupuestos -- flatpak run com.ingepresupuestos.IngePresupuestos --mcp</code>
+<button class="dl-code-copy dl-winget-copy" type="button" data-copy="claude mcp add ingepresupuestos -- flatpak run com.ingepresupuestos.IngePresupuestos --mcp">Copiar</button>
+</div>
+            <p>Enciende antes la conexión en <strong>Configuración ▸ Conexión con IA (MCP)</strong>.</p></div>
         </div>
       </div>
     </section>
 
-    <!-- ── 6. Formato abierto ── -->
-    <section class="feat feat-alt reveal">
-      <div class="container feat-row feat-reverse">
-        <div class="feat-text">
-          <h2>Tu data es tuya.<br>Formato abierto.</h2>
-          <p>Tu base de datos es un archivo <code>.db</code> SQLite estándar. Puedes abrirlo con DB Browser, DBeaver, Python o cualquier herramienta. No es un formato propietario.</p>
-          <p>Si mañana prefieres otro software, te llevas todo. Exporta a Excel, Word, ODT, ODS y PDF sin restricciones.</p>
-          <p><strong>Sin depender de otras aplicaciones:</strong> la app genera los PDF, Excel y Word por sí sola, sin necesidad de tener Office ni MS Project instalados.</p>
-        </div>
-        <div class="feat-img">
-          <img src="images/screenshots/data-formato-abierto.jpeg"
-               alt="Exportar datos en formato abierto" width="1600" height="966" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Complementos ── -->
-    <section class="feat reveal" id="complementos">
-      <div class="container feat-row">
-        <div class="feat-text">
-          <h2>Complementos<br>para tu país y tu obra.</h2>
-          <p>Veinte complementos incluidos, que se instalan y se activan solo en los proyectos donde los necesitas.</p>
-          <ul class="feat-list">
-            <li><strong>Países:</strong> Argentina, Brasil, Chile, España, Honduras, Italia, México y República Dominicana</li>
-            <li><strong>Metrados:</strong> acero, ladrillos y mortero, movimiento de tierras, dosificación de concreto y zapatas</li>
-            <li><strong>Precios y reportes:</strong> ajustar a un total, indirectos dentro del precio, impuesto sobre materiales y temas</li>
-          </ul>
-          <p class="feat-muted">Nada se activa solo. También puedes escribir el tuyo en Python.</p>
-        </div>
-        <div class="feat-img">
-          <img src="images/screenshots/complementos.webp" alt="Ventana de complementos de IngePresupuestos con Acero fácil, Ajustar a un total, APU formato Chile, Argentina, Brasil y Dosificación de concreto" width="1180" height="800" loading="lazy">
+    <section class="feat more reveal">
+      <div class="container">
+        <h2 class="more-title">Y además</h2>
+        <div class="more-grid">
+        <article class="more-card">
+          <figure class="more-img"><img class="zoomable" src="images/screenshots/cronograma-gantt.jpeg" alt="Gantt interactivo con ruta crítica" width="1600" height="967" loading="lazy"></figure>
+          <div class="more-body">
+            <h3>Gantt y cronogramas</h3>
+            <p>Programación CPM con ruta crítica, holguras e hitos.</p>
+            <ul class="feat-list">
+              <li><strong>Ida y vuelta con MS Project</strong> por XML, que también abren ProjectLibre y GanttProject</li>
+              <li><strong>Valorizado, adquisición de insumos</strong> y curva S</li>
+              <li><strong>Impresión</strong> de A4 a A0</li>
+            </ul>
+          </div>
+        </article>
+        <article class="more-card">
+          <figure class="more-img"><img class="zoomable" src="images/screenshots/formula-polinomica.jpeg" alt="Fórmula polinómica con sus monomios" width="1600" height="967" loading="lazy"></figure>
+          <div class="more-body">
+            <h3>Fórmula polinómica</h3>
+            <p>Reajusta tus valorizaciones con los índices unificados del INEI.</p>
+            <ul class="feat-list">
+              <li><strong>Validaciones del D.S. 011-79-VC</strong></li>
+              <li><strong>77 índices en 13 áreas</strong>, desde 2013 y con la base Diciembre 2025 = 100</li>
+              <li><strong>Cada monomio</strong> con sus insumos e incidencia</li>
+            </ul>
+          </div>
+        </article>
+        <article class="more-card">
+          <figure class="more-img"><img class="zoomable" src="images/screenshots/data-formato-abierto.jpeg" alt="Exportar el proyecto a formatos abiertos" width="1600" height="967" loading="lazy"></figure>
+          <div class="more-body">
+            <h3>Tus datos son tuyos</h3>
+            <p>Tu base es un archivo <code>.db</code> SQLite estándar.</p>
+            <ul class="feat-list">
+              <li><strong>Ábrela</strong> con DB Browser, DBeaver o Python</li>
+              <li><strong>Llévate todo</strong> a Excel, Word, ODS, ODT y PDF</li>
+              <li><strong>Sin Office</strong> ni MS Project instalados</li>
+            </ul>
+          </div>
+        </article>
         </div>
       </div>
     </section>
 
   </div>
 
-  <!-- ============ IMPACT: OFFLINE ============ -->
-  <section class="impact">
+  <!-- ============ COMPLEMENTOS ============ -->
+  <section id="complementos" class="section bg-light home-ext reveal">
     <div class="container">
-      <h2>Trabaja offline si quieres.<br>Tus datos nunca salen de tu PC.</h2>
-      <p>Sin servidores, sin suscripciones ocultas. SQLite local con backups automáticos diarios. Funciona sin internet.</p>
+      <div class="section-head">
+        <h2>Complementos para tu país y tu obra</h2>
+        <p>Veinte complementos incluidos, que se instalan y se activan solo en los proyectos donde los necesitas. Para Argentina, Brasil, Chile, España, Honduras, Italia, México y República Dominicana.</p>
+      </div>
+      <figure class="feat-img" style="margin-bottom:28px"><img class="zoomable" src="images/screenshots/complementos.webp" alt="Ventana de complementos de IngePresupuestos" width="1180" height="800" loading="lazy"></figure>
+      <div class="ej-grid nov-grid comp-grid">
+        <article class="ej-card nov-card"><h3>Acero fácil</h3><p class="comp-tag">Metrados</p><p>Metra columnas y vigas escribiendo los estribos como salen en el plano.</p></article>
+        <article class="ej-card nov-card"><h3>Ajustar a un total</h3><p class="comp-tag">Precios</p><p>Escala los insumos que elijas para llegar a un monto, y enseña antes el resultado.</p></article>
+        <article class="ej-card nov-card"><h3>Dosificación de concreto</h3><p class="comp-tag">Metrados</p><p>Materiales por m³ y por tanda con los datos que pones tú. No sustituye un diseño de mezcla.</p></article>
+        <article class="ej-card nov-card"><h3>APU formato Chile</h3><p class="comp-tag">Países</p><p>Análisis en cuatro bloques: materiales, equipos, mano de obra y varios.</p></article>
+        <article class="ej-card nov-card"><h3>Brasil</h3><p class="comp-tag">Países</p><p>Informe de BDI y formatos para Brasil.</p></article>
+        <article class="ej-card nov-card"><h3>Zapatas</h3><p class="comp-tag">Metrados</p><p>De las dimensiones y el armado saca excavación, concreto, encofrado y acero.</p></article>
+      </div>
+      <div class="home-ext-more">
+        <div>
+          <h3>Nada se activa solo</h3>
+          <p>Ningún complemento se descarga por su cuenta. Los que llevan código te piden permiso, y cada uno se enciende por proyecto.</p>
+        </div>
+        <div>
+          <h3>Escribe el tuyo</h3>
+          <p>Con <strong>Complementos ▸ Crear complemento…</strong> el programa te arma la carpeta de partida, en Python o solo con plantillas.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ ECOSISTEMA INGE ============ -->
-  <section id="ecosistema" class="section bg-light ecosistema">
+  <!-- ============ FAMILIA ============ -->
+  <section id="ecosistema" class="bridge reveal">
     <div class="container">
-      <div class="section-head">
-        <h2>Parte de una familia de<br>software libre para ingeniería.</h2>
-        <p>IngePresupuestos no está solo. Con el mismo autor y la misma licencia, dos programas más cubren el dibujo y el modelado de la obra. Los tres se hablan entre sí.</p>
-      </div>
-      <div class="eco-grid">
-        <article class="eco-card">
-          <a class="eco-shot" href="https://ingecad.org" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+      <h2>Parte de una familia de<br>software libre para ingeniería.</h2>
+      <p>IngePresupuestos no está solo. Con el mismo autor y la misma licencia, dos programas más cubren el dibujo y el modelado de la obra. Los tres se hablan entre sí.</p>
+      <div class="fam-grid">
+        <article class="fam-card fam-lime">
+          <a class="fam-shot" href="https://ingecad.org" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
             <img src="images/ecosistema/ingecad.jpg" alt="" width="960" height="540" loading="lazy">
           </a>
-          <span class="eco-tag">CAD 2D · Linux</span>
+          <span class="fam-tag">CAD 2D · Linux</span>
           <h3>IngeCAD</h3>
-          <p>Dibujo 2D libre al estilo del AutoCAD clásico: los mismos alias de teclado, línea de comandos de verdad, espacio papel y acotado, y archivos DWG y DXF que van y vuelven sin perder nada. Con complementos de topografía: puntos, curvas de nivel, perfiles y movimiento de tierras.</p>
-          <p class="eco-links">
+          <p>Dibujo 2D libre con alias de teclado, línea de comandos, espacio papel y archivos DWG y DXF de ida y vuelta. Con complementos de topografía.</p>
+          <p class="fam-links">
             <a href="https://ingecad.org" target="_blank" rel="noopener">ingecad.org</a>
             <a href="https://github.com/ingelibre/ingecad" target="_blank" rel="noopener">Código en GitHub</a>
           </p>
         </article>
-        <article class="eco-card">
-          <a class="eco-shot" href="https://ingetrazo.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
-            <img src="images/ecosistema/ingetrazo.jpg" alt="" width="960" height="540" loading="lazy">
-          </a>
-          <span class="eco-tag">Modelado 3D · BIM</span>
+        <article class="fam-card fam-blue">
+          <a class="fam-shot" href="https://ingetrazo.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="images/ecosistema/ingetrazo.jpg" alt="" width="960" height="540" loading="lazy"></a>
+          <span class="fam-tag">Modelado 3D · BIM</span>
           <h3>IngeTrazo</h3>
-          <p>Modelador 3D libre para arquitectura e ingeniería. IngePresupuestos lee los metrados del modelo abierto o su IFC para armar el presupuesto a partir de lo dibujado.</p>
-          <p class="eco-links">
+          <p>Modelador 3D libre para arquitectura e ingeniería. IngePresupuestos lee los metrados del modelo abierto o su IFC para armar el presupuesto.</p>
+          <p class="fam-links">
             <a href="https://ingetrazo.com" target="_blank" rel="noopener">ingetrazo.com</a>
             <a href="https://github.com/ingelibre/ingetrazo" target="_blank" rel="noopener">Código en GitHub</a>
           </p>
         </article>
       </div>
-      <p class="eco-note">Todo bajo GPL-3.0-or-later, sin versiones de pago. El código de los tres vive en <a href="https://github.com/ingelibre" target="_blank" rel="noopener">github.com/ingelibre</a>.</p>
+      <p class="fam-note">Todo bajo GPL-3.0-or-later, sin versiones de pago. El código de los tres vive en <a href="https://github.com/ingelibre" target="_blank" rel="noopener">github.com/ingelibre</a>.</p>
     </div>
+  </section>
+
+  <!-- ============ IMPACT ============ -->
+  <section class="impact">
+    <h2>Libre y de código abierto.<br>Para siempre.</h2>
+    <p>IngePresupuestos es software libre bajo GPL-3.0. Tus presupuestos viven en tu PC, en un formato abierto, con copias automáticas diarias y sin necesitar internet. Hecho en el Perú para quienes presupuestan y construyen.</p>
+    <aside class="impact-card">
+      <p class="impact-card-q">Ayuda a que siga libre</p>
+      <p class="impact-card-sub">Cada aporte, por pequeño que sea, sostiene su desarrollo.</p>
+      <a class="btn btn-lg impact-card-btn" href="/apoyar">Apoyar el proyecto</a>
+      <ul class="pay-chips" aria-label="Medios de pago"><li>Yape</li><li>Plin</li><li>Liberapay</li><li>PayPal</li></ul>
+      <p class="impact-card-alt">¿Sin presupuesto? También ayuda contarle a un colega o dejar una estrella en <a href="https://github.com/ingelibre/ingepresupuestos" target="_blank" rel="noopener">GitHub</a>.</p>
+    </aside>
   </section>
 
   <!-- ============ DESCARGAR ============ -->
   <section id="descargar" class="download-section">
     <div class="container">
-      <h2>Descargar</h2>
+      <h2>Consigue IngePresupuestos</h2>
       <p class="download-sub">Gratis y completo, para siempre · software libre bajo GPL-3.0.</p>
       <div class="dl-row">
         <div class="dl-group">
@@ -682,6 +712,7 @@
     <div class="container container-narrow">
       <div class="section-head">
         <h2>Preguntas frecuentes</h2>
+        <p>Lo que todos preguntan antes del primer presupuesto.</p>
       </div>
       <div class="faq-list">
         <details class="faq-item">
@@ -748,6 +779,7 @@
           <strong>IngePresupuestos</strong>
         </div>
         <p>Software libre de presupuestos de obra.</p>
+        <a class="btn btn-heart footer-support" href="/apoyar">Apoyar el proyecto</a>
         <p class="footer-copy">© 2026 Ing. Marco Sumari · Publicado bajo <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">GPL-3.0-or-later</a></p>
       </div>
       <div class="footer-col">
@@ -755,6 +787,7 @@
         <ul>
           <li><a href="#features">Características</a></li>
           <li><a href="#descargar">Descargar</a></li>
+          <li><a href="#novedades">Novedades</a></li>
           <li><a href="/apoyar">Apoyar el proyecto</a></li>
         </ul>
         <h4>También libres</h4>
@@ -778,6 +811,7 @@
         <h4>Contacto</h4>
         <ul>
           <li><a href="mailto:ing.sumari@gmail.com">ing.sumari@gmail.com</a></li>
+          <li><a href="https://github.com/ingelibre/ingepresupuestos/issues" target="_blank" rel="noopener">GitHub</a></li>
         </ul>
       </div>
     </div>
@@ -795,7 +829,6 @@
       <p class="aporte-modal-plataforma" id="aporte-modal-plataforma">Windows · .exe</p>
       <p class="aporte-intro aporte-intro-modal">Es <strong>software libre y gratuito</strong>.<br>
         Ayúdanos a seguir manteniéndolo y mejorándolo.</p>
-</span>
 
       <!-- La descarga SIEMPRE está aquí, activa desde que se abre el modal y sin
            depender de que elijas un monto. Si esto deja de ser lo más visible
@@ -835,6 +868,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=320"></script>
+  <script src="script.js?v=321"></script>
 </body>
 </html>
