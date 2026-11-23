@@ -56,6 +56,27 @@
     })
     .catch(() => setFallback());
 
+  // Cifras en vivo, como en ingetrazo.com. Solo cuenta los instaladores de
+  // GitHub Releases (R2, Flatpak y Microsoft Store no se suman). Si GitHub no
+  // responde, queda la cifra escrita en la página.
+  function setStat(name, n, round) {
+    const el = document.querySelector(`[data-stat="${name}"]`);
+    if (!el || !n) return;
+    if (round) n = Math.floor(n / round) * round;
+    el.textContent = String(n).replace(/\B(?=(\d{3})+(?!\d))/g, '.') + (round ? '+' : '');
+  }
+  if (document.querySelector('[data-stat]')) {
+    const api = 'https://api.github.com/repos/ingelibre/ingepresupuestos';
+    const pedir = url => fetch(url).then(r => (r.ok ? r.json() : null)).catch(() => null);
+    pedir(api).then(repo => { if (repo) setStat('stars', repo.stargazers_count); });
+    pedir(`${api}/releases?per_page=100`).then(list => {
+      if (!Array.isArray(list)) return;
+      let total = 0;
+      list.forEach(x => (x.assets || []).forEach(a => { total += a.download_count || 0; }));
+      setStat('downloads', total, total >= 1000 ? 100 : 0);
+    });
+  }
+
   // Precios según ubicación: soles en Perú (default), dólares fuera.
   // /cdn-cgi/trace es de Cloudflare, mismo origen, sin cookies. Fallback: zona horaria.
   function applyCurrency(curr) {
