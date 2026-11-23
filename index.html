@@ -37,7 +37,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=320">
 
   <script type="application/ld+json">
   {
@@ -155,6 +155,12 @@
 </head>
 <body>
 
+  <!-- ============ AVISO DE NUEVA VERSIÓN ============ -->
+  <div class="announce" id="announce" data-version="3.2.0">
+    <p><strong>Nuevo:</strong> IngePresupuestos 3.2.0 ya disponible. <a href="#novedades">Ver novedades →</a></p>
+    <button type="button" class="announce-close" aria-label="Cerrar aviso">×</button>
+  </div>
+
   <!-- ============ HEADER ============ -->
   <header class="nav">
     <div class="container nav-inner">
@@ -167,7 +173,8 @@
         <a href="#descargar">Descargar</a>
         <a href="https://docs.ingepresupuestos.com">Manual</a>
         <a href="/blog/">Blog</a>
-        <a href="#faq">FAQ</a>
+        <a href="https://github.com/ingelibre/ingepresupuestos" target="_blank" rel="noopener">GitHub</a>
+        <a href="/apoyar">Apoyar</a>
       </nav>
       <button class="nav-toggle" aria-label="Abrir menú" type="button">
         <span></span><span></span><span></span>
@@ -178,17 +185,88 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="container hero-center">
-      <h1>Software libre de presupuestos<br>de obra</h1>
-      <p class="hero-sub">Multiplataforma. Offline. Formato abierto.<br>Abre tus presupuestos en .prs, .sqlite, .bak y Excel.</p>
+      <span class="hero-badge">Software libre · GPL-3.0</span>
+      <h1>Tu presupuesto de obra, <span class="grad-text">de principio a fin</span>.</h1>
+      <p class="hero-lead">Análisis de costos, metrados, cronograma, reportes y control de obra en un solo programa. Libre, gratuito y sin conexión.</p>
       <div class="hero-ctas">
         <a href="#descargar" class="btn btn-primary btn-lg">Descargar IngePresupuestos</a>
-        <span class="hero-version">Última versión: <span id="latest-version">cargando…</span></span>
+        <a href="https://github.com/ingelibre/ingepresupuestos" class="btn btn-ghost btn-lg" target="_blank" rel="noopener">Ver el código</a>
       </div>
+      <span class="hero-version">Última versión: <span id="latest-version">cargando…</span></span>
     </div>
     <div class="hero-screenshot-wrap">
       <img class="hero-img" src="images/screenshots/principal.jpeg"
            alt="Vista principal de IngePresupuestos"
            width="1600" height="966" loading="eager" fetchpriority="high">
+    </div>
+  </section>
+
+  <!-- ============ CIFRAS ============ -->
+  <section class="stats" aria-label="IngePresupuestos en cifras">
+    <div class="container stats-row">
+        <div class="stat"><strong>13</strong><span>reportes</span></div>
+        <div class="stat"><strong>20</strong><span>complementos</span></div>
+        <div class="stat"><strong>8</strong><span>países con complemento</span></div>
+        <div class="stat"><strong>.db</strong><span>formato abierto</span></div>
+        <div class="stat"><strong>0</strong><span>costo y registro</span></div>
+        <div class="stat"><strong>2</strong><span>Windows · Linux</span></div>
+    </div>
+  </section>
+
+  <!-- ============ NOVEDADES ============ -->
+  <section id="novedades" class="section bg-light reveal">
+    <div class="container">
+      <div class="section-head">
+        <h2>Novedades de la 3.2.0</h2>
+        <p>La versión más grande hasta ahora: sub-partidas, BIM, conexión con asistentes de IA y complementos para cada país.</p>
+      </div>
+      <div class="ej-grid nov-grid">
+        <article class="ej-card nov-card">
+          <h3>Sub-partidas</h3>
+          <p>Un mortero o un concreto se analiza una vez y entra como una línea en otros análisis. Si cambia, cambian todas las partidas que lo usan.</p>
+        </article>
+        <article class="ej-card nov-card">
+          <h3>Modelo BIM</h3>
+          <p>Lee el IFC con sus unidades, muestra los elementos antes de importar y los vincula con sus partidas. Cuando el modelo cambia, enseña qué se movería antes de aplicarlo. Vista 3D en beta.</p>
+        </article>
+        <article class="ej-card nov-card">
+          <h3>Directo desde IngeTrazo</h3>
+          <p>Trae los metrados del modelo abierto, sin exportar nada, y señala en el modelo los elementos de una partida. Con IngeTrazo 0.6.3.3 o posterior.</p>
+        </article>
+        <article class="ej-card nov-card">
+          <h3>Conexión con asistentes de IA</h3>
+          <p>Claude, Codex, Gemini, Cursor o VS Code pueden consultar y editar tus presupuestos por MCP. Viene apagada y cada cambio se puede deshacer.</p>
+        </article>
+        <article class="ej-card nov-card">
+          <h3>20 complementos</h3>
+          <p>Formatos para ocho países, metrados de acero, ladrillos, tierras, concreto y zapatas, reportes y temas. Los instalas y activas en cada proyecto.</p>
+        </article>
+        <article class="ej-card nov-card">
+          <h3>Deshacer y Rehacer</h3>
+          <p>Ctrl+Z y Ctrl+Y en el presupuesto y los metrados, con menús nuevos para editar, reportar y metrar.</p>
+        </article>
+        <article class="ej-card nov-card">
+          <h3>Reportes a tu medida</h3>
+          <p>Temas de reporte por proyecto, columnas de mano de obra, materiales y equipos, y números con los separadores de tu moneda.</p>
+        </article>
+        <article class="ej-card nov-card">
+          <h3>S10 y contraseña</h3>
+          <p>Importa los análisis del Excel de S10 y avisa lo que no cuadra. Y un código para recuperar la contraseña, sin internet.</p>
+        </article>
+      </div>
+      <p class="nov-cta"><a class="btn btn-primary" href="https://github.com/ingelibre/ingepresupuestos/releases" target="_blank" rel="noopener">Todas las novedades →</a></p>
+    </div>
+  </section>
+
+  <!-- ============ 3 PASOS ============ -->
+  <section class="steps" aria-label="Cómo funciona">
+    <div class="container">
+      <h2>De los planos al expediente en 3 pasos</h2>
+      <ol class="steps-row">
+        <li class="step"><span class="step-n">1</span><h3>Trae</h3><p>Empieza de cero o abre lo que ya tienes: .prs, .sqlite, .bak, BC3, Excel o un modelo IFC.</p></li>
+        <li class="step"><span class="step-n">2</span><h3>Presupuesta</h3><p>Metrados, análisis de costos, insumos y cronograma, en la misma ventana.</p></li>
+        <li class="step"><span class="step-n">3</span><h3>Entrega</h3><p>Reportes en PDF, Excel y Word, y el control de la obra hasta la última valorización.</p></li>
+      </ol>
     </div>
   </section>
 
@@ -199,7 +277,7 @@
     <section class="feat elabora reveal">
       <div class="container">
         <div class="elabora-head">
-          <h2>Elabora tu presupuesto<br>de principio a fin.</h2>
+          <h2>Todo el expediente<br>en una sola ventana.</h2>
           <p>Todo el expediente técnico en una sola app: análisis de costos unitarios, insumos, metrados, especificaciones, memoria descriptiva, resumen ejecutivo y plantillas reutilizables. Sin saltar entre programas.</p>
         </div>
         <div class="elabora-carousel mini-carousel">
@@ -477,6 +555,25 @@
       </div>
     </section>
 
+    <!-- ── Complementos ── -->
+    <section class="feat reveal" id="complementos">
+      <div class="container feat-row">
+        <div class="feat-text">
+          <h2>Complementos<br>para tu país y tu obra.</h2>
+          <p>Veinte complementos incluidos, que se instalan y se activan solo en los proyectos donde los necesitas.</p>
+          <ul class="feat-list">
+            <li><strong>Países:</strong> Argentina, Brasil, Chile, España, Honduras, Italia, México y República Dominicana</li>
+            <li><strong>Metrados:</strong> acero, ladrillos y mortero, movimiento de tierras, dosificación de concreto y zapatas</li>
+            <li><strong>Precios y reportes:</strong> ajustar a un total, indirectos dentro del precio, impuesto sobre materiales y temas</li>
+          </ul>
+          <p class="feat-muted">Nada se activa solo. También puedes escribir el tuyo en Python.</p>
+        </div>
+        <div class="feat-img">
+          <img src="images/screenshots/complementos.webp" alt="Ventana de complementos de IngePresupuestos con Acero fácil, Ajustar a un total, APU formato Chile, Argentina, Brasil y Dosificación de concreto" width="1180" height="800" loading="lazy">
+        </div>
+      </div>
+    </section>
+
   </div>
 
   <!-- ============ IMPACT: OFFLINE ============ -->
@@ -513,7 +610,7 @@
           </a>
           <span class="eco-tag">Modelado 3D · BIM</span>
           <h3>IngeTrazo</h3>
-          <p>Modelador 3D libre al estilo SketchUp, pensado para ingeniería civil. Exporta el modelo en formato IFC, y ese IFC lo importa IngePresupuestos para armar el presupuesto a partir de lo dibujado.</p>
+          <p>Modelador 3D libre para arquitectura e ingeniería. IngePresupuestos lee los metrados del modelo abierto o su IFC para armar el presupuesto a partir de lo dibujado.</p>
           <p class="eco-links">
             <a href="https://ingetrazo.com" target="_blank" rel="noopener">ingetrazo.com</a>
             <a href="https://github.com/ingelibre/ingetrazo" target="_blank" rel="noopener">Código en GitHub</a>
@@ -631,6 +728,17 @@
     </div>
   </section>
 
+  <section class="final-cta">
+    <div class="container">
+      <h2>Empieza tu presupuesto hoy</h2>
+      <p>En Windows y Linux.</p>
+      <div class="final-cta-btns">
+        <a href="#descargar" class="btn btn-lg final-cta-dl">Descargar IngePresupuestos</a>
+        <a href="https://docs.ingepresupuestos.com" class="btn btn-lg final-cta-man">Leer el manual</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ FOOTER ============ -->
   <footer id="contacto" class="footer">
     <div class="container footer-grid">
@@ -660,7 +768,7 @@
         <ul>
           <li><a href="https://docs.ingepresupuestos.com">Manual de usuario</a></li>
           <li><a href="/blog/">Blog</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
           <li><a href="mailto:ing.sumari@gmail.com?subject=Bug%20-%20IngePresupuestos">Reportar bug</a></li>
           <li><a href="https://github.com/ingelibre/ingepresupuestos" target="_blank" rel="noopener">Código abierto (GitHub)</a></li>
           <li><a href="/privacidad">Privacidad</a></li>
@@ -727,6 +835,6 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=320"></script>
 </body>
 </html>

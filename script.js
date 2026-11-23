@@ -77,6 +77,17 @@
       applyCurrency(tz === 'America/Lima' ? 'PEN' : 'USD');
     });
 
+  // Aviso de versión: se recuerda cerrado, por versión
+  const aviso = document.getElementById('announce');
+  if (aviso) {
+    const clave = 'aviso-' + aviso.dataset.version;
+    try { if (localStorage.getItem(clave)) aviso.hidden = true; } catch (e) { /* sin almacenamiento */ }
+    aviso.querySelector('.announce-close').addEventListener('click', () => {
+      aviso.hidden = true;
+      try { localStorage.setItem(clave, '1'); } catch (e) { /* sin almacenamiento */ }
+    });
+  }
+
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
