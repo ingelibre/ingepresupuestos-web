@@ -75,7 +75,6 @@ Cambios coordinados:
 
 - Autor: Ing. Marco Sumari Tellez
 - Email: ing.sumari@gmail.com
-- WhatsApp: +51 998 839 090
 - Producto: https://github.com/tuxiasumari/ingepresupuestos-pyside6
 
 ## Licencia
