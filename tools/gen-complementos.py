@@ -53,8 +53,8 @@ pie = base[base.index('  <footer id="contacto"'):base.index("</footer>") + len("
 ver = base.split("style.css?v=")[1].split('"')[0]
 n = len(fichas)
 titulo = "Complementos · IngePresupuestos"
-desc = (f"Los {n} complementos de IngePresupuestos: formatos para ocho países, metrados de acero, ladrillos, "
-        "tierras, concreto y zapatas, reportes, precios y temas. Libres y sin conexión.")
+desc = (f"Los {n} complementos de IngePresupuestos: formatos para nueve países, metrados de acero, ladrillos, "
+        "tierras, concreto y zapatas, reportes, precios y temas. Libres, y puedes publicar el tuyo.")
 datos = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name": "Complementos de IngePresupuestos",
     "numberOfItems": n, "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": j["nombre"],
     "url": f"https://ingepresupuestos.com/complementos#{j['id']}"} for i, j in enumerate(fichas)]}, ensure_ascii=False)
@@ -93,7 +93,7 @@ datos = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name
     <div class="container">
       <div class="section-head">
         <h1>Complementos</h1>
-        <p>Formatos de tu país, metrados, reportes y temas. Los {n} vienen con IngePresupuestos 3.2.0, son libres y cada uno se activa solo donde lo necesitas. <a href="#instalar" class="ext-how">¿Cómo se instalan?</a></p>
+        <p>Formatos de tu país, metrados, reportes y temas. Los {n} vienen con IngePresupuestos 3.2.4, son libres y cada uno se activa solo donde lo necesitas. <a href="#instalar" class="ext-how">¿Cómo se instalan?</a></p>
       </div>
 
       <div class="ext-tools">
@@ -113,18 +113,20 @@ datos = json.dumps({"@context": "https://schema.org", "@type": "ItemList", "name
             <li>En <strong>Explorar</strong>, elige uno y pulsa <strong>Instalar</strong>. Queda apagado.</li>
             <li>Pulsa <strong>Activar…</strong>: verás el autor, la licencia, los archivos y qué cambia.</li>
           </ol>
-          <p class="ext-small">No hace falta internet: ya vienen con el programa. ¿Alguien te pasó uno? Usa <strong>Instalar .zip…</strong> o <strong>Instalar carpeta…</strong></p>
+          <p class="ext-small">Los de esta página no necesitan internet: ya vienen con el programa. Para los que publican los usuarios, pulsa <strong>Sincronizar</strong> (desde la 3.2.4; no está en la versión de Microsoft Store). ¿Alguien te pasó uno? Usa <strong>Instalar .zip…</strong> o <strong>Instalar carpeta…</strong></p>
         </div>
         <div class="ext-box">
           <h2>Nada se activa solo</h2>
           <p>Ninguno se descarga por su cuenta, y desactivarlo no toca tus proyectos.</p>
           <p><strong>Solo datos:</strong> no ejecuta nada. <strong>Con código:</strong> puede hacer lo mismo que el programa, y por eso pide tu permiso.</p>
-          <p class="ext-small">Los complementos de otras personas no llevan la marca «Incluido». Instálalos solo si confías en su autor.</p>
+          <p class="ext-small">Los de otras personas llevan <strong>Revisado</strong> si alguien del proyecto leyó ese archivo exacto, o <strong>Comunidad</strong> si solo pasaron una revisión automática. Instálalos solo si confías en su autor.</p>
         </div>
         <div class="ext-box ext-box-cta" id="crear">
-          <h2>Escribe el tuyo</h2>
+          <h2>Crea y publica el tuyo</h2>
           <p>Con <strong>Complementos ▸ Crear complemento…</strong> el programa arma la carpeta de partida. Un tema o un país se hacen sin programar.</p>
+          <p>Para compartirlo, en <strong>Instalados ▸ ⋯ ▸ Publicar…</strong> el programa prepara el archivo y la ficha. Tu complemento se queda en <strong>tu</strong> repositorio de GitHub, con licencia libre; una persona aprueba la primera ficha y las versiones nuevas pueden salir solas.</p>
           <a class="btn btn-primary" href="https://github.com/ingelibre/ingepresupuestos/blob/main/docs/complementos.md" target="_blank" rel="noopener">Guía para crear complementos</a>
+          <a class="ext-guide" href="https://github.com/ingelibre/ingepresupuestos-complementos" target="_blank" rel="noopener">Catálogo y pasos para publicar →</a>
           <a class="ext-guide" href="https://github.com/ingelibre/ingepresupuestos/issues" target="_blank" rel="noopener">Proponer uno →</a>
         </div>
       </div>
