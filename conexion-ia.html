@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#273445">
+  <title>Conexión con IA (MCP): qué puedes pedirle · IngePresupuestos</title>
+  <meta name="description" content="Conecta Claude, Codex, Gemini, Cursor o VS Code con IngePresupuestos: ejemplos de lo que puedes pedir en presupuestos, metrados, ACU, especificaciones, fórmula polinómica y valorizaciones. Gratis.">
+  <link rel="canonical" href="https://ingepresupuestos.com/conexion-ia">
+  <meta property="og:site_name" content="IngePresupuestos">
+  <meta property="og:title" content="Conexión con IA (MCP): qué puedes pedirle · IngePresupuestos">
+  <meta property="og:description" content="Conecta Claude, Codex, Gemini, Cursor o VS Code con IngePresupuestos: ejemplos de lo que puedes pedir en presupuestos, metrados, ACU, especificaciones, fórmula polinómica y valorizaciones. Gratis.">
+  <meta property="og:image" content="https://ingepresupuestos.com/images/og-banner.jpg">
+  <meta property="og:url" content="https://ingepresupuestos.com/conexion-ia">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css?v=328">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "¿Cuánto cuesta?", "acceptedAnswer": {"@type": "Answer", "text": "La conexión es gratis y viene en el programa. El asistente lo pones tú: según el que uses, puede requerir una cuenta o un plan de pago de su proveedor."}}, {"@type": "Question", "name": "¿Necesito una clave de API en IngePresupuestos?", "acceptedAnswer": {"@type": "Answer", "text": "No para esta conexión. El asistente usa su propia cuenta."}}, {"@type": "Question", "name": "¿Adónde van mis datos?", "acceptedAnswer": {"@type": "Answer", "text": "La conexión solo escucha en tu computadora, pero lo que el asistente lee viaja al proveedor de IA que uses. Si el presupuesto es reservado, tenlo en cuenta."}}, {"@type": "Question", "name": "¿Puede equivocarse?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Los totales y coeficientes los calcula el programa, pero las partidas, medidas y textos que propone la IA debes revisarlos tú. También las normas que cite."}}, {"@type": "Question", "name": "¿Qué no puede hacer?", "acceptedAnswer": {"@type": "Answer", "text": "No ve usuarios, claves ni la configuración, no ejecuta código, no cambia el catálogo ni la biblioteca y no edita proyectos en un estado bloqueado."}}, {"@type": "Question", "name": "¿Puedo deshacer lo que hizo?", "acceptedAnswer": {"@type": "Answer", "text": "Sí, con «Deshacer lo último de la IA». Guarda hasta 20 cambios. Si editaste el proyecto después, te avisa antes, porque también perderías lo tuyo."}}, {"@type": "Question", "name": "¿Los precios sirven para mi país?", "acceptedAnswer": {"@type": "Answer", "text": "Los de la biblioteca son referenciales del Perú, en soles. En un proyecto con otra moneda hay que elegir si entran o si se usa solo la estructura."}}]}</script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="/images/logo.png" alt="IngePresupuestos" width="32" height="32">
+        <span>IngePresupuestos</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/#features">Características</a>
+        <a href="/#descargar">Descargar</a>
+        <a href="/complementos">Complementos</a>
+        <a href="https://docs.ingepresupuestos.com">Manual</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://github.com/ingelibre/ingepresupuestos" target="_blank" rel="noopener">GitHub</a>
+        <a href="/apoyar">Apoyar</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="section bg-light ext-page">
+    <div class="container">
+      <div class="section-head">
+        <h1>Pídeselo a tu asistente de IA</h1>
+        <p>Claude, Codex, Gemini, Cursor o VS Code trabajan en tu presupuesto <strong>con el programa abierto</strong>: tú escribes lo que necesitas y lo ves aparecer en la ventana. Son 45 herramientas, gratis, por el protocolo abierto MCP. <a href="#conectar" class="ext-how">¿Cómo se conecta?</a></p>
+      </div>
+
+      <h2 class="ia-h2">Qué puedes pedir</h2>
+      <div class="ej-grid">
+        <article class="ej-card ia-card"><h3>Armar el presupuesto</h3><p>Crea el proyecto, los títulos y las partidas. Las que saca de la biblioteca entran con su análisis de costos.</p><p class="ia-ask">«Arma el presupuesto de un cerco de 60 m de largo y 2,40 m de alto. Pregúntame lo que falte.»</p><p class="ia-ask">«Agrega las partidas de instalaciones sanitarias que tengas en la biblioteca.»</p></article>
+        <article class="ej-card ia-card"><h3>Corregir y ordenar</h3><p>Renombra, mueve, copia y borra partidas, y la numeración se ajusta sola.</p><p class="ia-ask">«Pasa las partidas de pintura a un título nuevo.»</p><p class="ia-ask">«Copia el 02.03 al título 04.»</p></article>
+        <article class="ej-card ia-card"><h3>Metrados</h3><p>Llena la planilla con sus dimensiones o pone la cantidad. Si la planilla ya tiene datos, no la reemplaza sin que se lo pidas.</p><p class="ia-ask">«Metra el 02.01: seis zapatas de 1,20 × 1,20 × 0,50.»</p></article>
+        <article class="ej-card ia-card"><h3>Análisis y precios</h3><p>Arma o corrige el ACU y cambia precios solo en ese proyecto. El catálogo y la biblioteca no se tocan.</p><p class="ia-ask">«Sube el cemento a 32 y dime cuánto cambia el total.»</p><p class="ia-ask">«¿Qué insumos pesan más en la partida de concreto?»</p></article>
+        <article class="ej-card ia-card"><h3>Revisar</h3><p>Busca partidas sin metrado, sin análisis o con precio cero, y te explica lo que encuentra.</p><p class="ia-ask">«Revisa el presupuesto sin cambiar nada y ordena los problemas por lo que afectan al total.»</p></article>
+        <article class="ej-card ia-card"><h3>Pie y gastos generales</h3><p>Arma el pie y el detalle de gastos generales: personal, meses, porcentajes.</p><p class="ia-ask">«Detalla los gastos generales para cuatro meses, con residente y asistente.»</p></article>
+        <article class="ej-card ia-card"><h3>Especificaciones y memoria</h3><p>Redacta las especificaciones que faltan a partir de cada análisis, y la memoria descriptiva. No pisa tus textos ni pierde imágenes sin que se lo pidas. Se exportan en Word.</p><p class="ia-ask">«Redacta las especificaciones que faltan. Enséñame tres primero.»</p><p class="ia-ask">«Escribe la memoria con los datos de este proyecto y marca lo que deba completar yo.»</p></article>
+        <article class="ej-card ia-card"><h3>Fórmula polinómica</h3><p>La propone y explica cada monomio. Los coeficientes los calcula el programa con los índices de la obra.</p><p class="ia-ask">«Arma la fórmula y dime qué insumos no tienen índice.»</p></article>
+        <article class="ej-card ia-card"><h3>Cronograma y curva S</h3><p>Programa las partidas y lee la ruta crítica y el avance programado y real.</p><p class="ia-ask">«¿Qué partidas están en la ruta crítica?»</p><p class="ia-ask">«¿Cuánto vamos atrasados según la curva S?»</p></article>
+        <article class="ej-card ia-card"><h3>Valorizaciones</h3><p>Con el proyecto «En ejecución», crea la valorización y registra el metrado ejecutado. Las cerradas no se tocan.</p><p class="ia-ask">«Abre la valorización del mes y registra 45 m³ en la excavación.»</p></article>
+        <article class="ej-card ia-card"><h3>Modelo BIM</h3><p>Compara el modelo de un IFC o de IngeTrazo con el presupuesto, vincula elementos a partidas y los señala en IngeTrazo (0.6.3.3 o posterior).</p><p class="ia-ask">«¿Qué cambió en el modelo y qué partidas se mueven?»</p></article>
+        <article class="ej-card ia-card"><h3>Reportes</h3><p>Exporta a PDF, y a Excel o Word los reportes que los tienen. No sobrescribe un archivo sin que se lo pidas.</p><p class="ia-ask">«Guarda el presupuesto y los análisis en PDF en mi carpeta Documentos.»</p></article>
+      </div>
+
+      <h2 class="ia-h2">Cómo es una sesión</h2>
+      <ol class="ia-steps">
+        <li><strong>Pides.</strong> «Sube el cemento a 32 y dime cuánto cambia el total».</li>
+        <li><strong>Simula.</strong> Casi todos los cambios se pueden probar sin guardar: ves el total antes y después.</li>
+        <li><strong>Apruebas.</strong> Dile que espere tu visto bueno; los pedidos listos que editan ya lo hacen.</li>
+        <li><strong>Lo ves.</strong> El cambio aparece en la app. Si no te gusta, lo deshaces.</li>
+      </ol>
+
+      <h2 class="ia-h2">Seis pedidos listos</h2>
+      <p class="ia-p">Tu cliente los ofrece en su menú, si admite los «prompts» de MCP.</p>
+      <ul class="feat-list"><li><strong>Presupuestar el modelo BIM</strong> — del modelo abierto en IngeTrazo o de un IFC</li><li><strong>Revisar el presupuesto</strong> — errores y omisiones, sin cambiar nada</li><li><strong>¿Qué cambió en el modelo?</strong> — y su efecto en el costo</li><li><strong>Presupuesto desde una descripción</strong> — propone partidas y pregunta las medidas que faltan</li><li><strong>Redactar especificaciones técnicas</strong> — de las partidas que no las tienen</li><li><strong>Armar la fórmula polinómica</strong> — con sus índices y coeficientes</li></ul>
+
+      <h2 class="ia-h2">Tú tienes el control</h2>
+      <ul class="feat-list">
+        <li><strong>Apagada por defecto</strong> — la enciendes tú y se apaga al cerrar sesión</li>
+        <li><strong>Los números los calcula el programa</strong> — totales, incidencias y coeficientes</li>
+        <li><strong>Nada a medias</strong> — si un cambio falla, no se guarda</li>
+        <li><strong>Respeta tu trabajo</strong> — mientras escribes en una celda o tienes textos sin guardar, sus cambios se rechazan</li>
+        <li><strong>Respeta los permisos</strong> — los invitados solo leen y los proyectos ajenos no se ven</li>
+        <li><strong>Solo en tu computadora</strong> — con un token nuevo cada vez que se enciende</li>
+      </ul>
+
+      <h2 class="ia-h2" id="conectar">Cómo se conecta</h2>
+      <ol class="ia-steps">
+        <li>Abre IngePresupuestos, inicia sesión y entra en <strong>Configuración ▸ Conexión con IA (MCP)</strong>.</li>
+        <li>Marca <strong>Conexión encendida</strong> y elige tu asistente en <strong>Conectar con</strong>.</li>
+        <li>Pulsa <strong>Copiar</strong> y pega donde te indica. La línea ya es la de tu instalación.</li>
+      </ol>
+      <p class="ia-p">Por ejemplo:</p>
+      <div class="feat-ia-grid"><div class="feat-ia-cfg"><h3>Windows · Claude Code</h3><div class="dl-code"><code>claude mcp add ingepresupuestos -- &quot;C:\Program Files\IngePresupuestos\ingepresupuestos-mcp.exe&quot;</code><button class="dl-code-copy dl-winget-copy" type="button" data-copy="claude mcp add ingepresupuestos -- &quot;C:\Program Files\IngePresupuestos\ingepresupuestos-mcp.exe&quot;">Copiar</button></div></div><div class="feat-ia-cfg"><h3>Linux, Flatpak · Claude Code</h3><div class="dl-code"><code>claude mcp add ingepresupuestos -- flatpak run com.ingepresupuestos.IngePresupuestos --mcp</code><button class="dl-code-copy dl-winget-copy" type="button" data-copy="claude mcp add ingepresupuestos -- flatpak run com.ingepresupuestos.IngePresupuestos --mcp">Copiar</button></div></div><div class="feat-ia-cfg"><h3>Linux, Snap · Claude Code</h3><div class="dl-code"><code>claude mcp add ingepresupuestos -- snap run ingepresupuestos --mcp</code><button class="dl-code-copy dl-winget-copy" type="button" data-copy="claude mcp add ingepresupuestos -- snap run ingepresupuestos --mcp">Copiar</button></div></div></div>
+
+      <h2 class="ia-h2">Preguntas</h2>
+      <div class="faq-list"><details class="faq-item"><summary>¿Cuánto cuesta?</summary><p>La conexión es gratis y viene en el programa. El asistente lo pones tú: según el que uses, puede requerir una cuenta o un plan de pago de su proveedor.</p></details><details class="faq-item"><summary>¿Necesito una clave de API en IngePresupuestos?</summary><p>No para esta conexión. El asistente usa su propia cuenta.</p></details><details class="faq-item"><summary>¿Adónde van mis datos?</summary><p>La conexión solo escucha en tu computadora, pero lo que el asistente lee viaja al proveedor de IA que uses. Si el presupuesto es reservado, tenlo en cuenta.</p></details><details class="faq-item"><summary>¿Puede equivocarse?</summary><p>Sí. Los totales y coeficientes los calcula el programa, pero las partidas, medidas y textos que propone la IA debes revisarlos tú. También las normas que cite.</p></details><details class="faq-item"><summary>¿Qué no puede hacer?</summary><p>No ve usuarios, claves ni la configuración, no ejecuta código, no cambia el catálogo ni la biblioteca y no edita proyectos en un estado bloqueado.</p></details><details class="faq-item"><summary>¿Puedo deshacer lo que hizo?</summary><p>Sí, con «Deshacer lo último de la IA». Guarda hasta 20 cambios. Si editaste el proyecto después, te avisa antes, porque también perderías lo tuyo.</p></details><details class="faq-item"><summary>¿Los precios sirven para mi país?</summary><p>Los de la biblioteca son referenciales del Perú, en soles. En un proyecto con otra moneda hay que elegir si entran o si se usa solo la estructura.</p></details></div>
+
+      <p class="nov-cta"><a class="btn btn-primary" href="/#descargar">Descargar gratis</a> <a class="btn btn-ghost" href="https://github.com/ingelibre/ingepresupuestos/blob/main/docs/mcp.md" target="_blank" rel="noopener">Documentación técnica</a></p>
+    </div>
+  </main>
+
+  <footer id="contacto" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="/images/logo.png" alt="Logo de IngePresupuestos" width="36" height="36">
+          <strong>IngePresupuestos</strong>
+        </div>
+        <p>Software libre de presupuestos de obra.</p>
+        <p class="footer-copy">© 2026 Ing. Marco Sumari · Publicado bajo <a href="https://www.gnu.org/licenses/gpl-3.0.html" target="_blank" rel="noopener">GPL-3.0-or-later</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="/#features">Características</a></li>
+          <li><a href="/#descargar">Descargar</a></li>
+          <li><a href="/apoyar">Apoyar el proyecto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="https://docs.ingepresupuestos.com">Manual de usuario</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/#faq">FAQ</a></li>
+          <li><a href="mailto:ing.sumari@gmail.com?subject=Bug%20-%20IngePresupuestos">Reportar bug</a></li>
+          <li><a href="https://github.com/tuxiasumari/ingepresupuestos" target="_blank" rel="noopener">Código abierto (GitHub)</a></li>
+          <li><a href="/privacidad">Privacidad</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:ing.sumari@gmail.com">ing.sumari@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/script.js?v=327"></script>
+</body>
+</html>
