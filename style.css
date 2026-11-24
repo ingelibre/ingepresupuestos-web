@@ -1717,3 +1717,9 @@ button.aporte-link {
 .feat-bim .feat-text p.pronto { color: #9A4A0F; }
 .dl-pronto { opacity: .6; cursor: default; }
 .dl-pronto:hover { transform: none; box-shadow: none; }
+
+/* ── /complementos ── */
+.ext-card[hidden] { display: none; }
+.comp-page-grid .ext-shot { aspect-ratio: 760 / 392; background: var(--white); border-bottom: 1px solid var(--line); }
+.comp-page-grid .ext-shot img { object-fit: cover; object-position: top left; cursor: zoom-in; }
+.comp-page-grid .ext-card { scroll-margin-top: 90px; }

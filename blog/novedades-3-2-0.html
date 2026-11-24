@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#273445">
+
+  <title>IngePresupuestos 3.2.0: sub-partidas, BIM y complementos para tu país</title>
+  <meta name="description" content="La versión más grande hasta ahora: sub-partidas, metrados desde el modelo BIM o desde IngeTrazo, conexión con asistentes de IA, 20 complementos, deshacer y rehacer, y una beta para Mac.">
+  <meta name="author" content="Ing. Marco Sumari">
+
+  <link rel="canonical" href="https://ingepresupuestos.com/blog/novedades-3-2-0.html">
+
+  <meta property="og:site_name" content="IngePresupuestos">
+  <meta property="og:title" content="IngePresupuestos 3.2.0: sub-partidas, BIM y complementos para tu país">
+  <meta property="og:description" content="La versión más grande hasta ahora: sub-partidas, metrados desde el modelo BIM o desde IngeTrazo, conexión con asistentes de IA, 20 complementos, deshacer y rehacer, y una beta para Mac.">
+  <meta property="og:image" content="https://ingepresupuestos.com/images/blog/portada-3-2-0.jpg">
+  <meta property="og:url" content="https://ingepresupuestos.com/blog/novedades-3-2-0.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="es_PE">
+  <meta property="article:published_time" content="2026-11-23">
+  <meta property="article:author" content="Ing. Marco Sumari">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IngePresupuestos 3.2.0: sub-partidas, BIM y complementos para tu país">
+  <meta name="twitter:description" content="La versión más grande hasta ahora: sub-partidas, metrados desde el modelo BIM o desde IngeTrazo, conexión con asistentes de IA, 20 complementos, deshacer y rehacer, y una beta para Mac.">
+  <meta name="twitter:image" content="https://ingepresupuestos.com/images/blog/portada-3-2-0.jpg">
+
+  <link rel="icon" href="/images/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/style.css?v=327">
+  <link rel="stylesheet" href="/blog/blog.css?v=2">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "IngePresupuestos 3.2.0: sub-partidas, BIM y complementos para tu país",
+    "description": "La versión más grande hasta ahora: sub-partidas, metrados desde el modelo BIM o desde IngeTrazo, conexión con asistentes de IA, 20 complementos, deshacer y rehacer, y una beta para Mac.",
+    "image": "https://ingepresupuestos.com/images/blog/portada-3-2-0.jpg",
+    "datePublished": "2026-11-23",
+    "dateModified": "2026-11-23",
+    "author": { "@type": "Person", "name": "Ing. Marco Sumari" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "IngePresupuestos",
+      "logo": { "@type": "ImageObject", "url": "https://ingepresupuestos.com/images/logo.png" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ingepresupuestos.com/blog/novedades-3-2-0.html" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://ingepresupuestos.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ingepresupuestos.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "IngePresupuestos 3.2.0: sub-partidas, BIM y complementos para tu país", "item": "https://ingepresupuestos.com/blog/novedades-3-2-0.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Pierdo mis presupuestos al actualizar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No: la 3.2.0 usa la misma base de datos. Aun así, antes de actualizar haz una copia con «Exportar», y después revisa los puntos de la sección «Para revisar al actualizar»."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Los complementos necesitan internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Los 20 vienen con el programa. Se instalan desde Complementos → Administrar complementos…, quedan apagados y se activan cuando tú quieras."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿La conexión con IA envía mis presupuestos a internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Viene apagada. Si la enciendes, el asistente que conectes (Claude, Codex, Gemini, Cursor o VS Code) puede leer lo que consulte, y ese contenido llega al servicio de IA que uses. Los cambios que haga se pueden deshacer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Ya funciona en Mac?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hay una versión beta para Mac con procesador Apple y con Intel, desde macOS 14. Todavía no está firmada por Apple y necesitamos que la prueben: úsala primero con un presupuesto de ejemplo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Necesito IngeTrazo para usar BIM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Puedes importar un archivo IFC de otro programa. La conexión directa con IngeTrazo necesita la versión 0.6.3.3 o posterior."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand">
+        <img src="/images/logo.png" alt="IngePresupuestos" width="32" height="32">
+        <span>IngePresupuestos</span>
+      </a>
+      <nav class="nav-links">
+        <a href="/#features">Características</a>
+        <a href="/#descargar">Descargar</a>
+        <a href="/complementos">Complementos</a>
+        <a href="https://docs.ingepresupuestos.com">Manual</a>
+        <a href="/blog/">Blog</a>
+        <a href="https://github.com/ingelibre/ingepresupuestos" target="_blank" rel="noopener">GitHub</a>
+        <a href="/apoyar">Apoyar</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Abrir menú" type="button">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ ARTÍCULO ============ -->
+  <article class="article">
+    <div class="container container-narrow">
+
+      <nav class="breadcrumb" aria-label="Migas de pan">
+        <a href="/">Inicio</a><span>›</span>
+        <a href="/blog/">Blog</a><span>›</span>
+        IngePresupuestos 3.2.0: sub-partidas, BIM y complementos para tu país
+      </nav>
+
+      <header class="article-header">
+        <span class="tag">Novedades</span>
+        <h1>IngePresupuestos 3.2.0: sub-partidas, BIM y complementos para tu país</h1>
+        <div class="article-meta">
+          <strong>Ing. Marco Sumari</strong>
+          <span>·</span>
+          <time datetime="2026-11-23">23 de noviembre de 2026</time>
+        </div>
+      </header>
+
+      <img class="article-cover" src="/images/blog/portada-3-2-0.jpg" alt="IngePresupuestos 3.2.0: sub-partidas, BIM y complementos" loading="eager">
+
+      <div class="article-body">
+
+        <p>La 3.2.0 es la versión más grande que hemos publicado. Buena parte
+        sale de lo que pidieron usuarios de varios países, y por eso trae
+        algo nuevo: <strong>complementos</strong>, para que cada quien tenga el
+        formato de su país sin cargar con el de los demás.</p>
+
+        <h2>Sub-partidas: un mortero se analiza una sola vez</h2>
+
+        <p>Un mortero, un concreto o un encofrado se analiza una vez y entra
+        como una línea más en otros análisis. Si cambia, cambian todas las
+        partidas que lo usan. Los insumos, las adquisiciones, los requerimientos
+        y la fórmula polinómica bajan hasta los insumos reales, así que el
+        cemento del mortero se suma con el del resto de la obra.</p>
+
+        <h2>Metrados desde el modelo BIM</h2>
+
+        <p>El lector IFC es nuevo: respeta las unidades del archivo, prefiere la
+        cantidad neta y <strong>no inventa metrados</strong>. Si un elemento no
+        trae cantidad, lo dice.</p>
+
+        <figure>
+          <img class="zoomable" src="/images/screenshots/bim-modelo.webp" alt="Modelo BIM: los elementos del IFC a la izquierda, con su metrado, y las partidas a las que están vinculados a la derecha" loading="lazy">
+          <figcaption>Los elementos del modelo y la partida de cada uno. La columna abierta sale marcada «sin cantidad».</figcaption>
+        </figure>
+
+        <p>Ves los elementos antes de importar, los vinculas con sus partidas y,
+        cuando el modelo cambia, el programa enseña qué se movería
+        <strong>antes</strong> de aplicarlo. Lo que escribiste a mano no se toca.
+        También hay una <strong>vista 3D en beta</strong>: un clic en un elemento
+        lleva a su partida, y al revés. Necesita aceleración gráfica.</p>
+
+        <h3>Directo desde IngeTrazo</h3>
+
+        <p>Si modelas en <a href="https://ingetrazo.com">IngeTrazo</a>,
+        <strong>«Traer de IngeTrazo abierto…»</strong> lee el metrado sin exportar
+        nada, y <strong>«Mostrar en IngeTrazo»</strong> señala en el modelo los
+        elementos de una partida. Necesita IngeTrazo 0.6.3.3 o posterior; con una
+        versión anterior, exporta el modelo a IFC.</p>
+
+        <h2>20 complementos, y puedes hacer el tuyo</h2>
+
+        <figure>
+          <img class="zoomable" src="/images/screenshots/complementos.webp" alt="Ventana Administrar complementos con las categorías y las tarjetas de los complementos incluidos" loading="lazy">
+          <figcaption>Complementos → Administrar complementos… Todos se instalan apagados.</figcaption>
+        </figure>
+
+        <ul>
+          <li><strong>Países:</strong> Argentina, Brasil, Chile, España,
+              Honduras, Italia, México y República Dominicana.</li>
+          <li><strong>Metrados:</strong> acero, ladrillos y mortero, movimiento
+              de tierras, dosificación de concreto y zapatas.</li>
+          <li><strong>Reportes y precios:</strong> ajustar a un total, precios
+              con indirectos incluidos, impuesto sobre materiales y datos del
+              proyecto en el presupuesto.</li>
+          <li><strong>Temas de reporte:</strong> Propuesta y Sobrio.</li>
+        </ul>
+
+        <p>Por ejemplo, <strong>Acero fácil</strong> metra columnas y vigas
+        escribiendo los estribos como salen en el plano:
+        <code>1@.05, 8@.10, R@.20 c/ext</code>. Puedes verlos todos en la
+        <a href="/complementos">página de complementos</a>. Nada se descarga por
+        su cuenta, y los que llevan código te piden permiso.</p>
+
+        <h2>Conexión con asistentes de IA</h2>
+
+        <p>Claude, Codex, Gemini, Cursor o VS Code pueden consultar y editar tus
+        presupuestos por MCP, con el programa abierto. Viene apagada: la enciendes
+        tú, y lo que cambie el asistente se puede deshacer.</p>
+
+        <h2>Deshacer, rehacer y menús nuevos</h2>
+
+        <p>Por fin: <strong>Ctrl+Z</strong> y <strong>Ctrl+Y</strong>. Y menús
+        Editar, Reportes, Metrados, Pie, BIM, IA y Complementos, para no buscar
+        cada cosa en una pestaña distinta. En Archivo está «Guardar copia (.db)».</p>
+
+        <h2>Presupuesto y reportes</h2>
+
+        <ul>
+          <li>Las partidas con precio 1.00, sin precio o sin análisis se marcan en
+              rojo, y se avisa antes de imprimir. Se puede apagar.</li>
+          <li>Los números siguen los separadores de la moneda del proyecto en PDF,
+              Word, Excel y pantalla.</li>
+          <li>Columnas de mano de obra, materiales, equipos y subcontratos, y la
+              especificación bajo cada partida, si las quieres.</li>
+          <li>Temas de reporte por proyecto, con editor.</li>
+          <li>Presupuestos de miles de millones: ya no falla el monto en letras ni
+              se parten los números.</li>
+          <li>Grupos de más de 99 partidas: los códigos pasan a tres dígitos y
+              ordenan bien.</li>
+          <li>En el cronograma, corte a fin de mes calendario, y títulos que se
+              contraen y se expanden.</li>
+          <li>Se importan los análisis del Excel «Análisis de precios unitarios» de
+              S10, y se avisa lo que no cuadra.</li>
+          <li>Un código para recuperar la contraseña olvidada, sin internet.</li>
+        </ul>
+
+        <h2>Mac, en beta</h2>
+
+        <p>Ya hay una <a href="https://github.com/ingelibre/ingepresupuestos/releases/tag/mac-beta">versión
+        de prueba para Mac</a>, con procesador Apple o Intel, desde macOS 14. No
+        está firmada por Apple: la primera vez hay que abrir Ajustes del Sistema →
+        Privacidad y seguridad y pulsar «Abrir igualmente». No tengo un Mac, así
+        que cuéntame cómo te va.</p>
+
+        <h2>Para revisar al actualizar</h2>
+
+        <ul>
+          <li><strong>Haz una copia antes de actualizar</strong>, con «Exportar».</li>
+          <li><strong>El pie impreso cambia en los proyectos que nunca abrieron su
+              pestaña «Pie»:</strong> antes imprimían el costo directo como total;
+              ahora llevan gastos generales, utilidad e impuesto, igual que en
+              pantalla.</li>
+          <li>Los proyectos en monedas de coma decimal verán sus números con ese
+              formato.</li>
+          <li>Los códigos de grupos de más de 99 partidas pueden pasar a tres
+              dígitos.</li>
+        </ul>
+
+        <p>La lista completa está en las
+        <a href="https://github.com/ingelibre/ingepresupuestos/releases/tag/v3.2.0">notas
+        de la versión</a>. Gracias a todas las personas que escribieron, mandaron
+        sus formatos y probaron.</p>
+
+      </div>
+<div class="share-bar" data-url="https://ingepresupuestos.com/blog/novedades-3-2-0.html" data-title="IngePresupuestos 3.2.0: sub-partidas, BIM y complementos para tu país">
+          <span class="share-label">Comparte este post:</span>
+          <a class="share-btn share-wa" target="_blank" rel="noopener" aria-label="Compartir en WhatsApp"
+             href="https://wa.me/?text=IngePresupuestos%203.2.0%3A%20sub-partidas%2C%20BIM%20y%20complementos%20para%20tu%20pa%C3%ADs%20https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-2-0.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.82 11.82 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zM6.597 20.13c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.82 9.82 0 0 0 1.519 5.27l-.999 3.648 3.97-1.617zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+          </a>
+          <a class="share-btn share-fb" target="_blank" rel="noopener" aria-label="Compartir en Facebook"
+             href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-2-0.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a class="share-btn share-x" target="_blank" rel="noopener" aria-label="Compartir en X (Twitter)"
+             href="https://twitter.com/intent/tweet?text=IngePresupuestos%203.2.0%3A%20sub-partidas%2C%20BIM%20y%20complementos%20para%20tu%20pa%C3%ADs&url=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-2-0.html">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a class="share-btn share-in" target="_blank" rel="noopener" aria-label="Compartir en LinkedIn"
+             href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fingepresupuestos.com%2Fblog%2Fnovedades-3-2-0.html">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <button class="share-btn share-copy" type="button" aria-label="Copiar enlace">
+            <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          </button>
+        </div>
+
+      <!-- CTA: invita a descargar (no lo quites, es lo que convierte) -->
+      <div class="article-cta">
+        <h3>Haz tu presupuesto en minutos, no en días</h3>
+        <p>IngePresupuestos genera ACU, metrados, cronograma, especificaciones técnicas con IA y 13 reportes. Pruébalo gratis.</p>
+        <a href="/#descargar" class="btn btn-primary btn-lg">Descargar gratis</a>
+      </div>
+
+      <section class="article-faq">
+        <h2>Preguntas frecuentes</h2>
+        <details>
+          <summary>¿Pierdo mis presupuestos al actualizar?</summary>
+          <p>No: la 3.2.0 usa la misma base de datos. Aun así, antes de actualizar haz una copia con «Exportar», y después revisa los puntos de la sección «Para revisar al actualizar».</p>
+        </details>
+        <details>
+          <summary>¿Los complementos necesitan internet?</summary>
+          <p>No. Los 20 vienen con el programa. Se instalan desde Complementos → Administrar complementos…, quedan apagados y se activan cuando tú quieras.</p>
+        </details>
+        <details>
+          <summary>¿La conexión con IA envía mis presupuestos a internet?</summary>
+          <p>Viene apagada. Si la enciendes, el asistente que conectes (Claude, Codex, Gemini, Cursor o VS Code) puede leer lo que consulte, y ese contenido llega al servicio de IA que uses. Los cambios que haga se pueden deshacer.</p>
+        </details>
+        <details>
+          <summary>¿Ya funciona en Mac?</summary>
+          <p>Hay una versión beta para Mac con procesador Apple y con Intel, desde macOS 14. Todavía no está firmada por Apple y necesitamos que la prueben: úsala primero con un presupuesto de ejemplo.</p>
+        </details>
+        <details>
+          <summary>¿Necesito IngeTrazo para usar BIM?</summary>
+          <p>No. Puedes importar un archivo IFC de otro programa. La conexión directa con IngeTrazo necesita la versión 0.6.3.3 o posterior.</p>
+        </details>
+      </section>
+
+      <!-- Autor -->
+      <div class="author-box">
+        <img src="/images/logo.png" alt="Ing. Marco Sumari">
+        <div>
+          <div class="author-name">Ing. Marco Sumari</div>
+          <div class="author-role">Ingeniero civil y creador de IngePresupuestos</div>
+        </div>
+      </div>
+
+      <p class="article-back"><a href="/blog/">← Volver al blog</a></p>
+
+    </div>
+  </article>
+
+  <!-- ============ FOOTER ============ -->
+  <footer id="contacto" class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="/images/logo.png" alt="Logo de IngePresupuestos" width="36" height="36">
+          <strong>IngePresupuestos</strong>
+        </div>
+        <p>Software de presupuestos de obra.</p>
+        <p class="footer-copy">© 2026 Ing. Marco Sumari</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="/#features">Características</a></li>
+          <li><a href="/apoyar">Apoyar</a></li>
+          <li><a href="/#descargar">Descargar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <ul>
+          <li><a href="https://docs.ingepresupuestos.com">Manual de usuario</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li>
+        <a href="https://github.com/ingelibre/ingepresupuestos" target="_blank" rel="noopener">GitHub</a>
+        <a href="/apoyar">Apoyar</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="mailto:ing.sumari@gmail.com">ing.sumari@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/blog/blog.js?v=2"></script>
+</body>
+</html>

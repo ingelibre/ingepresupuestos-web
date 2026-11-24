@@ -192,7 +192,7 @@
   }
 
   // Cualquier captura dentro de carruseles o feat-img es ampliable
-  document.querySelectorAll('.mini-slide img, .feat-img img, .more-img img, .hero-img').forEach(img => {
+  document.querySelectorAll('.mini-slide img, .feat-img img, .more-img img, .hero-img, .comp-page-grid .ext-shot img').forEach(img => {
     img.classList.add('zoomable');
     img.addEventListener('click', () => openLightbox(img.currentSrc || img.src, img.alt));
   });
