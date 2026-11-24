@@ -3,3 +3,7 @@
 # van al blog en vez de a un 404.
 /blog/ingepresupuestos-software-libre  /blog/  301
 /blog/ingepresupuestos-software-libre.html  /blog/  301
+
+# El post de la 3.2.0 pasó a ser el de la 3.2.2; el enlace viejo ya se compartió.
+/blog/novedades-3-2-0  /blog/novedades-3-2-2  301
+/blog/novedades-3-2-0.html  /blog/novedades-3-2-2  301
